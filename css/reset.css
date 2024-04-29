@@ -18,7 +18,7 @@ button {
   font-size: inherit;
   background: none;
   border: none;
-  font: initial
+  font: inherit
 }
 
 select{
