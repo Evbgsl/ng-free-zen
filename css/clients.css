@@ -2,13 +2,9 @@
   padding: 30px 15px;
 }
 
-/* .clients__wrapper {} */
-
 .clients__brands {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 }
-
-/* .clients__brand {} */
 
