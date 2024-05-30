@@ -32,6 +32,7 @@ a {
 
 button {
   font: inherit;
+  font-family: inherit;
   color: inherit;
   background: none;
   border: none;
