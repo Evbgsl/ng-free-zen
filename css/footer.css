@@ -17,16 +17,15 @@
 
 /* .footer__info {} */
 
-.footer__logo img {
+.footer__logo {
+  display: block;
   width: 216px;
   height: 24px;
-  vertical-align: middle;
 }
 
 .footer__copy {
   margin-top: 10px;
   font-size: 12px;
-  font-family: 'Nunito', sans-serif;
 }
 
 .footer__dev {

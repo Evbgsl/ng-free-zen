@@ -6,7 +6,6 @@
 .column__title {
   font-size: 16px;
   font-weight: 700;
-  font-family: 'Nunito', sans-serif;
 }
 
 .column__list {
@@ -16,5 +15,4 @@
 .column__item {
   margin-top: 10px;
   font-size:  14px;
-  font-family: 'Nunito', sans-serif;
 }
