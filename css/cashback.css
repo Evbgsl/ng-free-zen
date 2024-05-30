@@ -1,0 +1,19 @@
+.cashback {
+  border: 4cap dashed red;
+  padding: 30px 15px;
+}
+
+.cashback__wrapper {
+  border: 2px dashed green;
+}
+
+/* cashback__text-block */
+
+.cashback__title {
+  font-size: 26px;
+  font-weight: 700;
+  }
+
+/* .cashback__copy {}*/
+
+/* .cashback__button {}*/
