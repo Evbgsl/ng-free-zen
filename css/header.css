@@ -23,8 +23,6 @@
   height: 100%;
 }
 
-/* .header__nav {} */
-
 .header__actions {
   margin-left: auto;
   display: flex;
@@ -63,5 +61,3 @@
   width: 26px;
   height: 26px;
 }
-
-
