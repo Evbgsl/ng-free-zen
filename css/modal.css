@@ -105,17 +105,14 @@
   font-family: inherit;
   outline: none;
   font-size: 16px;
-  color: #AAA; /* Текст по умолчанию */
+  color: #000; 
   background: none;
   border: none;
   appearance: none;
   padding-right: 20px;
 }
 
-/* Стили для выбранного значения */
-.form__select select.selected {
-  color: black; /* Чёрный текст для выбранного значения */
-}
+
 
 
 
