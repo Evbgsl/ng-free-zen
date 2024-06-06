@@ -93,6 +93,7 @@
   display: flex;
   align-items: center;
   border-bottom: 1px solid #AAA;
+  color: #AAA;
   font-size: 16px;
   height: 26px;
   width: 100%;
@@ -105,13 +106,17 @@
   font-family: inherit;
   outline: none;
   font-size: 16px;
-  color: #000; 
+  color: #AAA; 
   background: none;
   border: none;
   appearance: none;
   padding-right: 20px;
 }
 
+.form__select select:focus,
+.form__select select:valid {
+  color: #000; /* Цвет текста черный при фокусе и валидном значении */
+}
 
 
 
