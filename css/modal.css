@@ -24,7 +24,6 @@
   position: relative; 
 }
 
-
 @media (min-width: 770px) {
   .modal__body {
     width: 290px;
@@ -49,10 +48,6 @@
   align-self: flex-start;
 }
 
-
-
-
-
 .form {
   display: flex;
   flex-direction: column;
@@ -69,7 +64,6 @@
   display: flex;
   align-items: center;
   border-bottom: 1px solid #AAA;
-  color: #AAA;
   font-size: 16px;
   height: 26px;
   width: 100%;
@@ -78,15 +72,15 @@
 
 .form__input input {
   flex-grow: 1;
-  flex-shrink: 0; /* Запрещает сжимать input */
-  border: none; /* Удаляем границу у input */
+  flex-shrink: 0; 
   font-size: 16px;
   font-family: inherit;
-  outline: none; /* Убираем рамку при фокусе */
+  outline: none; 
 }
 
-
-
+.form__input input::placeholder {
+  color: #AAA; 
+}
 
 .form__select {
   position: relative;
@@ -115,23 +109,8 @@
 
 .form__select select:focus,
 .form__select select:valid {
-  color: #000; /* Цвет текста черный при фокусе и валидном значении */
+  color: #000; 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .form__checkbox {
   display: flex;
@@ -141,41 +120,28 @@
   height: 26px;
   font-size: 14px;
   text-decoration: underline;
-  border: 1px dashed red;
 }
 
-
-/* .form__checkbox input[type="checkbox"] {
+.form__checkbox input[type="checkbox"] {
   display: none; 
-} */
+}
 
-/* .form__checkbox a {
-  font-size: 14px;
-} */
-
-/* Стилизация внешнего вида "фэйкового" чекбокса */
-.form__checkbox::before {
-  content: ''; /* Пустой контент для псевдоэлемента */
+.form__checkbox input[type="checkbox"]  {
+  content: ''; 
   display: inline-block;
-  width: 14px; /* Высота чекбокса */
-  height: 14px; /* Ширина чекбокса */
-  border: 2px solid #00A1FF; 
-  margin-right: 5px; /* Отступ справа */
+  width: 14px; 
+  height: 14px; 
+  border: 2px solid #00A1FF;
+  border-radius: 2px; 
+  margin-right: 5px; 
 }
 
-/* Стилизация фэйкового чекбокса при выборе */
-.form__checkbox input[type="checkbox"]:checked + a::before {
-  background-color: #00A1FF; 
+.form__checkbox input[type="checkbox"]:checked {
+  background-color: #00A1FF;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"%3E%3Cpath fill="%23fff" stroke="%23fff" stroke-width="2" d="M13.78 3.78a.75.75 0 0 1 1.06 1.06l-8 8a.75.75 0 0 1-1.06 0l-4-4a.75.75 0 1 1 1.06-1.06L6 11.44l7.78-7.66z"/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: center;
 }
-
-
-
-
-
-
-
-
-
 
 .form__submit {
   border: 1px solid #222;
@@ -185,7 +151,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px; /* отступ сверху у последнего элемента */
+  margin-top: 20px;
 }
 
 
