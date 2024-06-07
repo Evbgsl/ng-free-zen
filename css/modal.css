@@ -141,18 +141,17 @@
   height: 26px;
   font-size: 14px;
   text-decoration: underline;
-  /* border: 1px dashed red; */
+  border: 1px dashed red;
 }
 
 
-.form__checkbox input[type="checkbox"] {
-  display: none; /* Скрыть реальный чекбокс */
-}
+/* .form__checkbox input[type="checkbox"] {
+  display: none; 
+} */
 
-.form__checkbox a {
+/* .form__checkbox a {
   font-size: 14px;
-  /* text-decoration: underline;  */
-}
+} */
 
 /* Стилизация внешнего вида "фэйкового" чекбокса */
 .form__checkbox::before {
@@ -166,8 +165,17 @@
 
 /* Стилизация фэйкового чекбокса при выборе */
 .form__checkbox input[type="checkbox"]:checked + a::before {
-  background-color: #00A1FF; /* Заливка чекбокса при выборе */
+  background-color: #00A1FF; 
 }
+
+
+
+
+
+
+
+
+
 
 .form__submit {
   border: 1px solid #222;
