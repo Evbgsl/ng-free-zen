@@ -1,10 +1,10 @@
 /*clients*/
 .clients {
   padding: 30px 15px;
-}
 
-.clients__brands {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  &__brands {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
 }

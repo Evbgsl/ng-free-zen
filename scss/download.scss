@@ -1,46 +1,55 @@
 /*download*/
+
+//Переменные
+$gap-large: 30px;
+$gap-small: 15px;
+
+// Миксин для flex-контейнеров с колонками и gap
+@mixin flex-column($gap) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
 .download {
   padding: 30px 15px;
+
+  &__wrapper {
+    @include flex-column($gap-large);
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  &__copy {
+    margin-top: 20px;
+  }
+
+  &__links {
+    margin-top: 20px;
+    width: fit-content;
+    @include flex-column($gap-small);
+  }
+
+  &__link {
+    display: block;
+    width: 150px;
+    height: 44px;
+  }
+
+  &__image-block {
+    height: 72vw;
+    border: 1px solid #aaa;
+    border-radius: 20px;
+    overflow: hidden;
+    
+    img {
+      display: block;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 }
 
-.download__wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.download__title {
-  font-size: 30px;
-  font-weight: 700;
-}
-
-.download__copy {
-  margin-top: 20px;
-}
-
-.download__links {
-  margin-top: 20px;
-  width: fit-content;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.download__link {
-  display: block;
-  width: 150px;
-  height: 44px;
-}
-
-.download__image-block {
-  height: 72vw;
-  border: 1px solid #aaa;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.download__image-block img {
-  display: block;
-  height: 100%;
-  object-fit: cover;
-}
