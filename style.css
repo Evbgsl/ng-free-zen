@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*reset*/
 *,
 *::before,
@@ -46,7 +45,6 @@ input {
   border: 0;
 }
 
-/*fonts*/
 @font-face {
   font-family: "Nunito";
   src: url("assets/fonts/Nunito/Nunito-Regular.woff2") format("woff2");
@@ -69,63 +67,6 @@ input {
 body {
   padding-top: 50px;
   font-family: "Nunito", sans-serif;
-}
-
-/*header*/
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: #fff;
-  border-bottom: 1px solid #AAA;
-}
-.header__wrapper {
-  display: flex;
-  align-items: center;
-  padding: 0 15px;
-  height: 50px;
-}
-.header__logo {
-  width: 77px;
-  height: 30px;
-}
-.header__logo img {
-  height: 100%;
-}
-.header__actions {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-.header__lang {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 50px;
-  height: 30px;
-  border: 1px solid #000;
-  border-radius: 4px;
-  overflow: hidden;
-}
-.header__lang img {
-  position: absolute;
-  z-index: -1;
-  top: 50%;
-  right: 8px;
-  transform: translateY(-50%);
-  width: 9px;
-  height: 6px;
-}
-.header__lang select {
-  padding-left: 8px;
-  height: 100%;
-  width: 100%;
-}
-.header__theme {
-  width: 26px;
-  height: 26px;
 }
 
 /*menu*/
@@ -185,6 +126,80 @@ body {
   bottom: 50%;
   transform: translateY(50%) rotate(-45deg);
   transition: all 2s;
+}
+
+/*column*/
+.column__title {
+  font-size: 16px;
+  font-weight: 700;
+}
+.column__list {
+  margin-top: 20px;
+}
+.column__item {
+  margin-top: 10px;
+  font-size: 14px;
+}
+.column img {
+  width: 40px;
+  height: 40px;
+}
+
+/*header*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-bottom: 1px solid #AAA;
+}
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  height: 50px;
+}
+.header__logo {
+  width: 77px;
+  height: 30px;
+}
+.header__logo img {
+  height: 100%;
+}
+.header__actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header__lang {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 50px;
+  height: 30px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.header__lang img {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  width: 9px;
+  height: 6px;
+}
+.header__lang select {
+  padding-left: 8px;
+  height: 100%;
+  width: 100%;
+}
+.header__theme {
+  width: 26px;
+  height: 26px;
 }
 
 /*download*/
@@ -361,23 +376,6 @@ body {
   height: 46px;
 }
 
-/*column*/
-.column__title {
-  font-size: 16px;
-  font-weight: 700;
-}
-.column__list {
-  margin-top: 20px;
-}
-.column__item {
-  margin-top: 10px;
-  font-size: 14px;
-}
-.column img {
-  width: 40px;
-  height: 40px;
-}
-
 /*modal*/
 .modal {
   display: flex;
@@ -515,7 +513,5 @@ body {
   justify-content: center;
   margin-top: 20px;
 }
-
-/*Окончание......................................*/
 
 /*# sourceMappingURL=style.css.map */
