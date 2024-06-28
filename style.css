@@ -45,6 +45,12 @@ input {
   border: 0;
 }
 
+/*global*/
+body {
+  padding-top: 50px;
+  font-family: "Nunito", sans-serif;
+}
+
 @font-face {
   font-family: "Nunito";
   src: url("assets/fonts/Nunito/Nunito-Regular.woff2") format("woff2");
@@ -63,12 +69,6 @@ input {
   font-style: normal;
   font-display: swap;
 }
-/*global*/
-body {
-  padding-top: 50px;
-  font-family: "Nunito", sans-serif;
-}
-
 /*menu*/
 .menu {
   display: none;
