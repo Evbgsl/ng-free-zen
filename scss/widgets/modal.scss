@@ -4,7 +4,7 @@
 
 .modal {
   display: flex;
-  display: none;
+  // display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -12,7 +12,7 @@
   height: 100%;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: $modal-background-color;
   padding: 0 15px;
 
   &__body {
@@ -23,7 +23,7 @@
     height: 344px;
     border-radius: 5px;
     align-items: center; 
-    background-color: white;
+    background-color: $basic-background-color;
     position: relative;
     
     @media (min-width: 770px) {

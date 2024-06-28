@@ -2,7 +2,7 @@
 @import '../utils/mixins';
 
 .download {
-  padding: 30px 15px;
+  @include padding-standart();
 
   &__wrapper {
     @include flex-column($gap-large);

@@ -152,7 +152,7 @@ body {
   left: 0;
   right: 0;
   background: #fff;
-  border-bottom: 1px solid #AAA;
+  border-bottom: 1px solid #aaa;
 }
 .header__wrapper {
   display: flex;
@@ -379,7 +379,6 @@ body {
 /*modal*/
 .modal {
   display: flex;
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -398,7 +397,7 @@ body {
   height: 344px;
   border-radius: 5px;
   align-items: center;
-  background-color: white;
+  background-color: #fff;
   position: relative;
 }
 @media (min-width: 770px) {
