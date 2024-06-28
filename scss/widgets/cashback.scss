@@ -1,6 +1,8 @@
 /*cashback*/
+@import '../utils/mixins';
+
 .cashback {
-  padding: 30px 15px;
+  @include padding-standart();
 
   &__title {
     font-size: 26px;

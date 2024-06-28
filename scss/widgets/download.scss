@@ -1,15 +1,5 @@
 /*download*/
-
-//Переменные
-$gap-large: 30px;
-$gap-small: 15px;
-
-// Миксин для flex-контейнеров с колонками и gap
-@mixin flex-column($gap) {
-  display: flex;
-  flex-direction: column;
-  gap: $gap;
-}
+@import '../utils/mixins';
 
 .download {
   padding: 30px 15px;
@@ -41,8 +31,8 @@ $gap-small: 15px;
 
   &__image-block {
     height: 72vw;
-    border: 1px solid #aaa;
-    border-radius: 20px;
+    @include image-border-line();
+    border-radius: $image-border-radius;
     overflow: hidden;
     
     img {

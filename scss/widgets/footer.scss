@@ -1,6 +1,8 @@
 /*footer*/
+@import '../utils/mixins';
+
 .footer {
-  padding: 30px 15px;
+  @include padding-standart();
   color: #fff;
   background: #484848;
 

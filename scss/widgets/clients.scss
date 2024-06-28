@@ -1,6 +1,8 @@
 /*clients*/
+@import '../utils/mixins';
+
 .clients {
-  padding: 30px 15px;
+  @include padding-standart();
 
   &__brands {
     display: grid;

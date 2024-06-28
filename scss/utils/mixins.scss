@@ -1,3 +1,4 @@
+//подключение шрифтов
 @mixin font_face(
   $path,
   $fileName,
@@ -13,4 +14,20 @@
     font-style: normal;
     font-display: swap;
   }
+}
+
+//отрисовка линии вокруг картинки
+@mixin image-border-line() {
+  border: 1px solid $image-border-color;
+}
+
+//flex-контейнеры с колонками и gap
+@mixin flex-column($gap) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+@mixin padding-standart() {
+  padding: 30px 15px;
 }
