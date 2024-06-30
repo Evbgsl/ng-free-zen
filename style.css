@@ -185,11 +185,11 @@ body .app {
   height: 50px;
 }
 .header__logo {
-  color: var(--icon-color);
   height: 30px;
   width: 77px;
 }
 .header__logo svg {
+  color: var(--icon-color);
   height: 100%;
   width: 100%;
 }
@@ -209,7 +209,8 @@ body .app {
   border-radius: 4px;
   overflow: hidden;
 }
-.header__lang img {
+.header__lang svg {
+  color: var(--icon-color);
   position: absolute;
   z-index: -1;
   top: 50%;
