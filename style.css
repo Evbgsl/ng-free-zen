@@ -186,12 +186,10 @@ body .app {
 }
 .header__logo {
   color: var(--icon-color);
+  height: 100%;
 }
 .header__logo svg {
   width: 77px;
-  height: 30px;
-}
-.header__logo svg img {
   height: 100%;
 }
 .header__actions {
