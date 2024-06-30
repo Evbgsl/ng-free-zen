@@ -3,7 +3,6 @@
 
 .cashback {
   padding: $padding-section-sm;
-  background: var(--bg-primary);
 
   &__title {
     font-size: 26px;
@@ -30,6 +29,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--color-primary);
   }
 }
 

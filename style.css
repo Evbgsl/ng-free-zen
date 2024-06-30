@@ -70,6 +70,10 @@ body {
   font-family: "Nunito", sans-serif;
 }
 
+.app {
+  background: var(--bg-primary);
+}
+
 @font-face {
   font-family: "Nunito";
   src: url("assets/fonts/Nunito/Nunito-Regular.woff2") format("woff2");
@@ -228,7 +232,6 @@ body {
 /*download*/
 .download {
   padding: 30px 15px;
-  background: var(--bg-primary);
 }
 .download__wrapper {
   display: flex;
@@ -271,7 +274,6 @@ body {
 /*warranty*/
 .warranty {
   padding: 30px 15px;
-  background: var(--bg-primary);
 }
 .warranty__wrapper {
   display: flex;
@@ -341,7 +343,6 @@ body {
 /*cashback*/
 .cashback {
   padding: 30px 15px;
-  background: var(--bg-primary);
 }
 .cashback__title {
   font-size: 26px;
@@ -365,12 +366,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--color-primary);
 }
 
 /*clients*/
 .clients {
   padding: 30px 15px;
-  background: var(--bg-primary);
 }
 .clients__brands {
   display: grid;

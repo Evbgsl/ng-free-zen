@@ -3,7 +3,6 @@
 
 .warranty {
   padding: $padding-section-sm;
-  background: var(--bg-primary);
 
   &__wrapper {
     @include flex-column($gap-large);
