@@ -218,6 +218,7 @@ body {
   padding-left: 8px;
   height: 100%;
   width: 100%;
+  color: var(--color-primary);
 }
 .header__theme {
   width: 26px;
