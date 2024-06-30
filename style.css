@@ -374,6 +374,7 @@ body .app {
   padding: 30px 15px;
 }
 .clients__brands {
+  color: var(--icon-color);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
