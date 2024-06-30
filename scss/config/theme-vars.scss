@@ -12,6 +12,9 @@
     --bg-primary: #fff;
     --bg-footer: #484848;
     --bg-modal:  rgba(0, 0, 0, 0.5);
+
+    // icon-color
+    --icon-color: black;
   }
 
   &.dark {
@@ -27,5 +30,8 @@
     --bg-primary: #484848;
     --bg-footer: #484848;
     --bg-modal:  rgba(0, 0, 0, 0.5);
+    
+    // icon-color
+    --icon-color: white;
   }
 }

@@ -53,6 +53,7 @@ input {
   --bg-primary: #fff;
   --bg-footer: #484848;
   --bg-modal: rgba(0, 0, 0, 0.5);
+  --icon-color: black;
 }
 .app.dark {
   --color-primary: #fff;
@@ -62,6 +63,7 @@ input {
   --bg-primary: #484848;
   --bg-footer: #484848;
   --bg-modal: rgba(0, 0, 0, 0.5);
+  --icon-color: white;
 }
 
 /*global*/
@@ -176,9 +178,6 @@ body .app {
   background: var(--bg-primary);
   border-bottom: 1px solid var(--border-color-primary);
 }
-.header.dark .header__logo img {
-  content: url("assets/icons/logo-dark.svg");
-}
 .header__wrapper {
   display: flex;
   align-items: center;
@@ -186,10 +185,13 @@ body .app {
   height: 50px;
 }
 .header__logo {
+  color: var(--icon-color);
+}
+.header__logo svg {
   width: 77px;
   height: 30px;
 }
-.header__logo img {
+.header__logo svg img {
   height: 100%;
 }
 .header__actions {

@@ -9,14 +9,6 @@
   background: var(--bg-primary);
   border-bottom: 1px solid var(--border-color-primary);
 
-  &.dark {
-    .header__logo {
-      img {
-        content: url('assets/icons/logo-dark.svg');
-      }
-    }
-  } 
-
   &__wrapper {
     display: flex;
     align-items: center;
@@ -25,13 +17,19 @@
   }
 
   &__logo {
-    width: 77px;
-    height: 30px;
 
-    img {
-      height: 100%;
+    color: var(--icon-color);
+
+    svg{
+      width: 77px;
+      height: 30px;
+  
+      img {
+        height: 100%;
+      }
     }
   }
+
 
   &__actions {
     margin-left: auto;
