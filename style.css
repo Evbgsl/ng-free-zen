@@ -45,6 +45,25 @@ input {
   border: 0;
 }
 
+.app.light {
+  --color-primary: #000;
+  --text-footer-color: #fff;
+  --border-color-primary: #aaa;
+  --border-color-secondary: #000;
+  --bg-primary: #fff;
+  --bg-footer: #484848;
+  --bg-modal: rgba(0, 0, 0, 0.5);
+}
+.app.dark {
+  --color-primary: #fff;
+  --text-footer-color: #fff;
+  --border-color-primary: #fff;
+  --border-color-secondary: #fff;
+  --bg-primary: #484848;
+  --bg-footer: #484848;
+  --bg-modal: rgba(0, 0, 0, 0.5);
+}
+
 /*global*/
 body {
   padding-top: 50px;
@@ -151,8 +170,11 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  background: #fff;
-  border-bottom: 1px solid #aaa;
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color-primary);
+}
+.header.dark .header__logo img {
+  content: url("assets/icons/logo-dark.svg");
 }
 .header__wrapper {
   display: flex;
@@ -179,7 +201,7 @@ body {
   align-items: center;
   width: 50px;
   height: 30px;
-  border: 1px solid #000;
+  border: 1px solid var(--border-color-secondary);
   border-radius: 4px;
   overflow: hidden;
 }
@@ -205,6 +227,7 @@ body {
 /*download*/
 .download {
   padding: 30px 15px;
+  background: var(--bg-primary);
 }
 .download__wrapper {
   display: flex;
@@ -214,9 +237,11 @@ body {
 .download__title {
   font-size: 30px;
   font-weight: 700;
+  color: var(--color-primary);
 }
 .download__copy {
   margin-top: 20px;
+  color: var(--color-primary);
 }
 .download__links {
   margin-top: 20px;
@@ -232,7 +257,7 @@ body {
 }
 .download__image-block {
   height: 72vw;
-  border: 1px solid #aaa;
+  border: 1px solid var(--border-color-primary);
   border-radius: 20px;
   overflow: hidden;
 }
@@ -245,6 +270,7 @@ body {
 /*warranty*/
 .warranty {
   padding: 30px 15px;
+  background: var(--bg-primary);
 }
 .warranty__wrapper {
   display: flex;
@@ -254,6 +280,7 @@ body {
 .warranty__title {
   font-size: 26px;
   font-weight: 700;
+  color: var(--color-primary);
 }
 .warranty__copy:first-of-type {
   margin-top: 20px;
@@ -261,10 +288,11 @@ body {
 .warranty__copy {
   margin-top: 10px;
   font-size: 14px;
+  color: var(--color-primary);
 }
 .warranty__image-block {
   height: 72vw;
-  border: 1px solid #aaa;
+  border: 1px solid var(--border-color-primary);
   border-radius: 20px;
   overflow: hidden;
 }
@@ -277,6 +305,7 @@ body {
 /*care*/
 .care {
   padding: 30px 15px;
+  background: var(--bg-primary);
 }
 .care__wrapper {
   display: flex;
@@ -286,17 +315,19 @@ body {
 .care__title {
   font-size: 26px;
   font-weight: 700;
+  color: var(--color-primary);
 }
 .care__copy {
   margin-top: 10px;
   font-size: 14px;
+  color: var(--color-primary);
 }
 .care__copy:first-of-type {
   margin-top: 20px;
 }
 .care__image-block {
   height: 72vw;
-  border: 1px solid #aaa;
+  border: 1px solid var(--border-color-primary);
   border-radius: 20px;
   overflow: hidden;
 }
@@ -309,20 +340,23 @@ body {
 /*cashback*/
 .cashback {
   padding: 30px 15px;
+  background: var(--bg-primary);
 }
 .cashback__title {
   font-size: 26px;
   font-weight: 700;
+  color: var(--color-primary);
 }
 .cashback__copy {
   margin-top: 10px;
   font-size: 14px;
+  color: var(--color-primary);
 }
 .cashback__copy:first-of-type {
   margin-top: 20px;
 }
 .cashback__button {
-  border: 1px solid #aaa;
+  border: 1px solid var(--border-color-secondary);
   border-radius: 30px;
   width: 100%;
   height: 50px;
@@ -335,6 +369,7 @@ body {
 /*clients*/
 .clients {
   padding: 30px 15px;
+  background: var(--bg-primary);
 }
 .clients__brands {
   display: grid;
@@ -345,8 +380,8 @@ body {
 /*footer*/
 .footer {
   padding: 30px 15px;
-  color: #fff;
-  background: #484848;
+  color: var(--text-footer-color);
+  background: var(--bg-footer);
 }
 .footer__wrapper {
   display: grid;
@@ -379,6 +414,7 @@ body {
 /*modal*/
 .modal {
   display: flex;
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -386,7 +422,7 @@ body {
   height: 100%;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--bg-modal);
   padding: 0 15px;
 }
 .modal__body {
@@ -397,10 +433,10 @@ body {
   height: 344px;
   border-radius: 5px;
   align-items: center;
-  background-color: #fff;
+  background-color: var(--bg-primary);
   position: relative;
 }
-@media (min-width: 770px) {
+@media (min-width: 768px) {
   .modal__body {
     width: 290px;
     transition: all 1s;

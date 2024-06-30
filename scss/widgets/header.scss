@@ -6,8 +6,16 @@
   top: 0;
   left: 0;
   right: 0;
-  background: $basic-background-color;
-  border-bottom: 1px solid $image-border-color;
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color-primary);
+
+  &.dark {
+    .header__logo {
+      img {
+        content: url('assets/icons/logo-dark.svg');
+      }
+    }
+  } 
 
   &__wrapper {
     display: flex;
@@ -38,7 +46,7 @@
     align-items: center;
     width: 50px;
     height: 30px;
-    border: 1px solid $basic-border-color;
+    border: 1px solid var(--border-color-secondary);
     border-radius: 4px;
     overflow: hidden;
 

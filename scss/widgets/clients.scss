@@ -2,7 +2,8 @@
 @import '../utils/mixins';
 
 .clients {
-  @include padding-standart();
+  padding: $padding-section-sm;
+  background: var(--bg-primary);
 
   &__brands {
     display: grid;

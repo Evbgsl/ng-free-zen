@@ -2,9 +2,9 @@
 @import '../utils/mixins';
 
 .footer {
-  @include padding-standart();
-  color: $text-footer-color;
-  background: $background-footer-color;
+  padding: $padding-section-sm;
+  color: var(--text-footer-color);
+  background: var(--bg-footer);
 
   &__wrapper {
     display: grid;

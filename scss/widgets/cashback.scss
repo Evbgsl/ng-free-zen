@@ -2,16 +2,19 @@
 @import '../utils/mixins';
 
 .cashback {
-  @include padding-standart();
+  padding: $padding-section-sm;
+  background: var(--bg-primary);
 
   &__title {
     font-size: 26px;
     font-weight: 700;
+    color: var(--color-primary);
   }
 
   &__copy {
     margin-top: 10px;
     font-size: 14px;
+    color: var(--color-primary);
 
     &:first-of-type {
       margin-top: 20px; 
@@ -19,8 +22,8 @@
   }
 
   &__button {
-    border: 1px solid $image-border-color;
-    border-radius: 30px;
+    border: 1px solid var(--border-color-secondary);
+    border-radius: $border-radius-secondary;
     width: 100%;
     height: 50px;
     margin-top: 20px;

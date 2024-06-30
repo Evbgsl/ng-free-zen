@@ -2,7 +2,8 @@
 @import '../utils/mixins';
 
 .care {
-  @include padding-standart();
+  padding: $padding-section-sm;
+  background: var(--bg-primary);
 
   &__wrapper {
     @include flex-column($gap-large)
@@ -11,11 +12,13 @@
   &__title {
     font-size: 26px;
     font-weight: 700;
+    color: var(--color-primary);
   }
   
   &__copy {
     margin-top: 10px;
     font-size: 14px;
+    color: var(--color-primary);
     
     &:first-of-type {
       margin-top: 20px;
@@ -24,8 +27,8 @@
 
   &__image-block {  
     height: 72vw;
-    @include image-border-line();
-    border-radius: $image-border-radius;
+    border: 1px solid var(--border-color-primary);
+    border-radius: $border-radius-primary;
     overflow: hidden;
 
     img {
