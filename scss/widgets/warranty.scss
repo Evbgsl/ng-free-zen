@@ -1,0 +1,40 @@
+/*warranty*/
+@import '../utils/mixins';
+
+.warranty {
+  padding: $padding-section-sm;
+
+  &__wrapper {
+    @include flex-column($gap-large);
+  }
+
+  &__title {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+
+  &__copy:first-of-type {
+    margin-top: 20px;
+  }
+  
+  &__copy {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--color-primary);
+  }
+  
+  &__image-block {
+    height: 72vw;
+    border: 1px solid var(--border-color-primary);
+    border-radius: $border-radius-primary;
+    overflow: hidden;
+
+    img {
+      display: block;
+      height: 100%;
+      object-fit: cover;
+    }
+
+  }
+}

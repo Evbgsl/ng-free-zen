@@ -1,0 +1,46 @@
+/*download*/
+@import '../utils/mixins';
+
+.download {
+  padding: $padding-section-sm;
+
+  &__wrapper {
+    @include flex-column($gap-large);
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+
+  &__copy {
+    margin-top: 20px;
+    color: var(--color-primary);
+  }
+
+  &__links {
+    margin-top: 20px;
+    width: fit-content;
+    @include flex-column($gap-small);
+  }
+
+  &__link {
+    display: block;
+    width: 150px;
+    height: 44px;
+  }
+
+  &__image-block {
+    height: 72vw;
+    border: 1px solid var(--border-color-primary);
+    border-radius: $border-radius-primary;
+    overflow: hidden;
+    
+    img {
+      display: block;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

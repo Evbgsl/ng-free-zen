@@ -1,0 +1,70 @@
+/*header*/
+@import '../utils/mixins';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color-primary);
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    height: 50px;
+  }
+
+  &__logo {
+    height: 30px;
+    width: 77px;
+    
+    svg{
+      color: var(--icon-color);
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__lang {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 30px;
+    border: 1px solid var(--border-color-secondary);
+    border-radius: 4px;
+    overflow: hidden;
+
+    svg {
+      color: var(--icon-color);
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      right: 8px;
+      transform: translateY(-50%);
+      width: 9px;
+      height: 6px;
+    }
+
+    select {
+      padding-left: 8px;
+      height: 100%;
+      width: 100%;
+      color: var(--color-primary);
+    }
+  }
+
+  &__theme {
+    width: 26px;
+    height: 26px;
+  }
+}
