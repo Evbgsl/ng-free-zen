@@ -1,0 +1,41 @@
+/*footer*/
+@import '../utils/mixins';
+
+.footer {
+  padding: $padding-section-sm;
+  color: var(--text-footer-color);
+  background: var(--bg-footer);
+
+  &__wrapper {
+    display: grid;
+    gap: $gap-large;
+  }
+
+  &__columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $gap-large;
+  }
+
+  &__logo {
+    display: block;
+    width: 216px;
+    height: 24px;
+  }
+
+  &__copy {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+  &__dev {
+    display: flex;
+    justify-content: center;
+
+    img {
+      margin-top: 10px;
+      width: 130px;
+      height: 46px;
+    }
+  }
+}
