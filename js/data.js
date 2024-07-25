@@ -11,8 +11,8 @@ export const header = {
   ],
   navigation: [
     {
-      key: '#downloand',
-      text:'Downloand',
+      key: '#download',
+      text:'Download',
     },
     {
       key: '#warranty',
