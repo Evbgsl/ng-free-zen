@@ -34,8 +34,8 @@ export const header = {
 };
 
 export const download = {
-  title: 'Title text',
-  texts: ['Some paragraph 1'],
+  title: 'Peaceful shopping mindful money',
+  texts: ['See how we can help with making your shopping experience and money management more ZEN.'],
   linkApple: {
     url: 'https://apple.com',
     source: './assets/icons/apple.svg',
