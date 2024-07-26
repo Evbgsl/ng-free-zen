@@ -55,8 +55,7 @@ function createDownloadSection(data) {
   image.alt = data.image.description;
   imageBlock.appendChild(image);
 
-  // Добавление секции на страницу
-  document.body.appendChild(section);
+  return section;
 }
 
 function createWarrantySection(data) {
@@ -149,7 +148,53 @@ function createCareSection(data) {
   document.body.appendChild(section);
 }
 
+function createCashbackSection(data) {
+  // Создание секции
+  const section = document.createElement('section');
+  section.className = 'cashback';
+  section.id = 'cashback';
 
-createDownloadSection(download);
-createWarrantySection(warranty);
-createCareSection(care);
+  // Создание обертки
+  const wrapper = document.createElement('div');
+  wrapper.className = 'cashback__wrapper';
+  section.appendChild(wrapper);
+
+  // Создание текстового блока
+  const textBlock = document.createElement('div');
+  textBlock.className = 'cashback__text-block';
+  wrapper.appendChild(textBlock);
+
+  // Создание заголовка
+  const title = document.createElement('h2');
+  title.className = 'cashback__title';
+  title.textContent = data.title;
+  textBlock.appendChild(title);
+
+  // Создание абзаца
+  data.texts.forEach(text => {
+    const copy = document.createElement('p');
+    copy.className = 'cashback__copy';
+    copy.textContent = text;
+    textBlock.appendChild(copy);
+  });
+
+  // Создание кнопки
+  const button = document.createElement('button');
+  button.className = 'cashback__button';
+  button.type = 'button';
+  button.id = 'order-open';
+  button.textContent = data.buttonText;
+  textBlock.appendChild(button);
+
+  // Добавление секции на страницу
+  document.body.appendChild(section);
+}
+
+
+const appDiv = document.querySelector('.app.light');
+if (appDiv) {
+  appDiv.appendChild(createDownloadSection(download));
+} else {
+  console.error('Div с классом "app light" не найден.');
+}
+

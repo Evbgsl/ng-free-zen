@@ -35,7 +35,9 @@ export const primaryInfo = {
 
 export const download = {
   title: 'Peaceful shopping mindful money',
-  texts: ['See how we can help with making your shopping experience and money management more ZEN.'],
+  texts: [
+    'See how we can help with making your shopping experience and money management more ZEN.',
+  ],
   links: [
     {
       url: 'https://apple.com',
@@ -77,8 +79,12 @@ export const care = {
 };
 
 export const cashback = {
-  title: 'Title text',
-  texts: ['Some paragraph 1', 'Some paragraph 2', 'Some paragraph 3'],
+  title: 'and cashback!',
+  texts: [
+    'It saves a little bit of money while you’re shopping, but in many cases it takes ages to get anything out of it.',
+    'We gave it a thought and made cashback way more friendly.',
+    'Up to 14% of what you spend using ZEN Mastercard ® will materialize on your account right after the purchase.',
+  ],
   buttonText: 'Order a consultation',
 };
 
