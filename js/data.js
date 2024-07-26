@@ -64,8 +64,12 @@ export const warranty = {
 };
 
 export const care = {
-  title: 'Title text',
-  texts: ['Some paragraph 1', 'Some paragraph 2', 'Some paragraph 3'],
+  title: 'ZEN Care',
+  texts: [
+    'Shopping online is usually a delightful experience. Until it is not.',
+    'Until something you buy, proves to be faulty, missing or a totally wrong item, you’re in for long product return procedures.',
+    'But, here comes ZEN Care: a free, built-in shopping protection.',
+  ],
   image: {
     source: './assets/images/3.jpg',
     description: 'Card',

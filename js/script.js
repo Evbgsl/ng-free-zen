@@ -104,5 +104,52 @@ function createWarrantySection(data) {
   document.body.appendChild(section);
 }
 
+function createCareSection(data) {
+  // Создание секции
+  const section = document.createElement('section');
+  section.className = 'care';
+  section.id = 'care';
+
+  // Создание обертки
+  const wrapper = document.createElement('div');
+  wrapper.className = 'care__wrapper';
+  section.appendChild(wrapper);
+
+  // Создание текстового блока
+  const textBlock = document.createElement('div');
+  textBlock.className = 'care__text-block';
+  wrapper.appendChild(textBlock);
+
+  // Создание заголовка
+  const title = document.createElement('h2');
+  title.className = 'care__title';
+  title.textContent = data.title;
+  textBlock.appendChild(title);
+
+  // Создание абзаца
+  data.texts.forEach(text => {
+    const copy = document.createElement('p');
+    copy.className = 'care__copy';
+    copy.textContent = text;
+    textBlock.appendChild(copy);
+  });
+
+  // Создание блока изображения
+  const imageBlock = document.createElement('div');
+  imageBlock.className = 'care__image-block';
+  wrapper.appendChild(imageBlock);
+
+  // Изображение
+  const image = document.createElement('img');
+  image.src = data.image.source;
+  image.alt = data.image.description;
+  imageBlock.appendChild(image);
+
+  // Добавление секции на страницу
+  document.body.appendChild(section);
+}
+
+
 createDownloadSection(download);
 createWarrantySection(warranty);
+createCareSection(care);
