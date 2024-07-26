@@ -99,8 +99,7 @@ function createWarrantySection(data) {
   image.alt = data.image.description;
   imageBlock.appendChild(image);
 
-  // Добавление секции на страницу
-  document.body.appendChild(section);
+  return section;
 }
 
 function createCareSection(data) {
@@ -144,8 +143,7 @@ function createCareSection(data) {
   image.alt = data.image.description;
   imageBlock.appendChild(image);
 
-  // Добавление секции на страницу
-  document.body.appendChild(section);
+  return section;
 }
 
 function createCashbackSection(data) {
@@ -186,14 +184,16 @@ function createCashbackSection(data) {
   button.textContent = data.buttonText;
   textBlock.appendChild(button);
 
-  // Добавление секции на страницу
-  document.body.appendChild(section);
+  return section;
 }
 
 
 const appDiv = document.querySelector('.app.light');
 if (appDiv) {
   appDiv.appendChild(createDownloadSection(download));
+  appDiv.appendChild(createWarrantySection(warranty));
+  appDiv.appendChild(createCareSection(care));
+  appDiv.appendChild(createCashbackSection(cashback));
 } else {
   console.error('Div с классом "app light" не найден.');
 }
