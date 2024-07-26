@@ -1,34 +1,34 @@
-export const header = {
+export const primaryInfo = {
   langs: [
     {
       key: 'ru',
-      text: 'RU',
+      name: 'RU',
     },
     {
       key: 'en',
-      text: 'EN',
+      name: 'EN',
     },
   ],
   navigation: [
     {
-      key: '#download',
-      text:'Download',
+      key: 'download',
+      name: 'Download',
     },
     {
-      key: '#warranty',
-      text:'Warranty',
+      key: 'warranty',
+      name: 'Warranty',
     },
     {
-      key: '#care',
-      text:'Care',
+      key: 'care',
+      name: 'Care',
     },
     {
-      key: '#cashback',
-      text:'Cashback',
+      key: 'cashback',
+      name: 'Cashback',
     },
     {
-      key: '#clients',
-      text:'Clients',
+      key: 'clients',
+      name: 'Clients',
     },
   ],
 };
@@ -36,14 +36,16 @@ export const header = {
 export const download = {
   title: 'Peaceful shopping mindful money',
   texts: ['See how we can help with making your shopping experience and money management more ZEN.'],
-  linkApple: {
-    url: 'https://apple.com',
-    source: './assets/icons/apple.svg',
-  },
-  linkGoogle: {
-    url: 'https://google.com',
-    source: './assets/icons/google.svg',
-  },
+  links: [
+    {
+      url: 'https://apple.com',
+      name: 'apple',
+    },
+    {
+      url: 'https://google.com',
+      name: 'google',
+    },
+  ],
   image: {
     source: './assets/images/1.jpg',
     description: 'Bag and device',
@@ -51,8 +53,10 @@ export const download = {
 };
 
 export const warranty = {
-  title: 'Title text',
-  texts: ['Some paragraph 1', 'Some paragraph 2'],
+  title: '1-year warranty boost',
+  texts: [
+    'ZEN cards have a very neat feature that will help you whenever your electronic devices start failing after the standard warranty ends, which is pretty common.',
+    'When you buy any electronics with your ZEN shopping Mastercard, their warranty gets extended by one year. How does it work? It simply does. Automatically'],
   image: {
     source: './assets/images/2.jpg',
     description: 'Basket',
@@ -77,142 +81,194 @@ export const cashback = {
 export const clients = {
   brands: [
     {
-      lightSource: './assets/brands/light/1.svg',
-      darkSource: './assets/brands/dark/1.svg',
-      description: 'Brand Rosegal',
-    },
-    {
+      name: 'Rosegal',
       lightSource: './assets/brands/light/2.svg',
       darkSource: './assets/brands/dark/2.svg',
-      description: 'Brand Gearbest',
     },
     {
+      name: 'Gearbest',
+      lightSource: './assets/brands/light/2.svg',
+      darkSource: './assets/brands/dark/2.svg',
+    },
+    {
+      name: 'Allegro',
       lightSource: './assets/brands/light/3.svg',
       darkSource: './assets/brands/dark/3.svg',
-      description: 'Brand Allegro',
     },
     {
+      name: 'Aliexpress',
       lightSource: './assets/brands/light/4.svg',
       darkSource: './assets/brands/dark/4.svg',
-      description: 'Brand Aliexpress',
     },
     {
+      name: 'Booking.com',
       lightSource: './assets/brands/light/5.svg',
       darkSource: './assets/brands/dark/5.svg',
-      description: 'Brand Booking.com',
     },
     {
+      name: 'MediaMarkt',
       lightSource: './assets/brands/light/6.svg',
       darkSource: './assets/brands/dark/6.svg',
-      description: 'Brand MediaMarkt',
     },
     {
+      name: 'RTVeuroAGD',
       lightSource: './assets/brands/light/7.svg',
       darkSource: './assets/brands/dark/7.svg',
-      description: 'Brand RTVeuroAGD',
     },
     {
+      name: 'Groupon',
       lightSource: './assets/brands/light/8.svg',
       darkSource: './assets/brands/dark/8.svg',
-      description: 'Brand Groupon',
     },
   ]
 };
 
-export const footer = {
-  columns: [
+export const secondaryInfo = {
+  categories: [
     {
-      title: 'Learn',
+      name: 'Learn',
       links: [
         {
           url: 'https://example.com',
-          text: 'Help center',
+          content: {
+            type: 'text',
+            data: 'Help center',
+          }
         },
         {
           url: 'https://example.com',
-          text: 'Join ZEN team',
+          content: {
+            type: 'text',
+            data: 'Join ZEN team',
+          }
         },
         {
           url: 'https://example.com',
-          text: 'Privacy Policy',
+          content: {
+            type: 'text',
+            data: 'Privacy Policy',
+          }
         },
         {
           url: 'https://example.com',
-          text: 'Cookies',
+          content: {
+            type: 'text',
+            data: 'Cookies',
+          }
         },
         {
           url: 'https://example.com',
-          text: 'Terms of use',
+          content: {
+            type: 'text',
+            data: 'Terms of use',
+          }
         },
       ],
     },
     {
-      title: 'Discover',
+      name: 'Discover',
       links: [
         {
           url: 'https://example.com',
-          text: 'For developers',
+          content: {
+            type: 'text',
+            data: 'For developers',
+          }
         },
         {
           url: 'https://example.com',
-          text: 'Apple Pay',
+          content: {
+            type: 'text',
+            data: 'Apple Pay',
+          }
         },
         {
           url: 'https://example.com',
-          text: 'Google Pay',
+          content: {
+            type: 'text',
+            data: 'Google Pay',
+          }
         },
       ],
     },
     {
-      title: 'Offer',
+      name: 'Offer',
       links: [
         {
           url: 'https://example.com',
-          text: 'Business',
+          content: {
+            type: 'text',
+            data: 'Business',
+          }
         },
         {
           url: 'https://example.com',
-          text: 'Personal',
+          content: {
+            type: 'text',
+            data: 'Personal',
+          }
         },
       ],
     },
     {
-      title: 'Language',
+      name: 'Language',
       links: [
         {
           url: 'https://example.com',
-          text: 'English',
+          content: {
+            type: 'text',
+            data: 'English',
+          }
         },
         {
           url: 'https://example.com',
-          text: 'Polish',
-        },
-      ],
-    },
-    {
-      title: 'Follow us',
-      links: [
-        {
-          url: 'https://example.com',
-          source: './assets/icons/in.svg',
-          description: 'Linkedin',
+          content: {
+            type: 'text',
+            data: 'Polish',
+          }
         },
       ],
     },
     {
-      title: 'Contact',
+      name: 'Follow us',
       links: [
         {
-          email: 'hello@zen.com',
+          url: 'https://example.com',
+          content: {
+            type: 'image',
+            data: './assets/icons/in.svg',
+            description: 'Linkedin',
+          }
+        },
+      ],
+    },
+    {
+      name: 'Contact',
+      links: [
+        {
+          url: 'hello@zen.com',
+          content: {
+            type: 'text',
+            data: 'hello@zen.com',
+          }
         }
       ],
     },
   ],
-  info: {
-    texts: ['Some paragraph 1', 'Some paragraph 2','Some paragraph 3', 'Some paragraph 4','Some paragraph 5', 'Some paragraph 6'],
-    developer: {
-      url: 'https://example.com',
-      source: './assets/icons/developer.svg',
-    },
+  texts: [
+    'Some paragraph 1',
+    'Some paragraph 2',
+    'Some paragraph 3',
+    'Some paragraph 4',
+    'Some paragraph 5',
+    'Some paragraph 6',
+  ],
+  developer: {
+    url: 'https://example.com',
+    content: {
+      type: 'image',
+      data: './assets/icons/developer.svg',
+      description: 'PCI',
+    }
   },
   };

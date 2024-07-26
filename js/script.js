@@ -1,4 +1,4 @@
-import {header, download, warranty, care, cashback, clients, footer} from './data.js';
+import {primaryInfo, download, warranty, care, cashback, clients, secondaryInfo} from './data.js';
 
 function createDownloadSection(data) {
   // Создание секции
@@ -33,25 +33,16 @@ function createDownloadSection(data) {
   links.className = 'download__links';
   textBlock.appendChild(links);
 
-  // Ссылка Apple
-  const appleLink = document.createElement('a');
-  appleLink.className = 'download__link';
-  appleLink.href = data.linkApple.url;
-  const appleImg = document.createElement('img');
-  appleImg.src = data.linkApple.source;
-  appleImg.alt = 'Apple icon';
-  appleLink.appendChild(appleImg);
-  links.appendChild(appleLink);
-
-  // Ссылка Google
-  const googleLink = document.createElement('a');
-  googleLink.className = 'download__link';
-  googleLink.href = data.linkGoogle.url;
-  const googleImg = document.createElement('img');
-  googleImg.src = data.linkGoogle.source;
-  googleImg.alt = 'Google icon';
-  googleLink.appendChild(googleImg);
-  links.appendChild(googleLink);
+  data.links.forEach(link => {
+    const linkElement = document.createElement('a');
+    linkElement.className = 'download__link';
+    linkElement.href = link.url;
+    const linkImg = document.createElement('img');
+    linkImg.src = `./assets/icons/${link.name}.svg`;
+    linkImg.alt = `${link.name.charAt(0).toUpperCase() + link.name.slice(1)} icon`;
+    linkElement.appendChild(linkImg);
+    links.appendChild(linkElement);
+  });
 
   // Создание блока изображения
   const imageBlock = document.createElement('div');
@@ -68,4 +59,50 @@ function createDownloadSection(data) {
   document.body.appendChild(section);
 }
 
+function createWarrantySection(data) {
+  // Создание секции
+  const section = document.createElement('section');
+  section.className = 'warranty';
+  section.id = 'warranty';
+
+  // Создание обертки
+  const wrapper = document.createElement('div');
+  wrapper.className = 'warranty__wrapper';
+  section.appendChild(wrapper);
+
+  // Создание текстового блока
+  const textBlock = document.createElement('div');
+  textBlock.className = 'warranty__text-block';
+  wrapper.appendChild(textBlock);
+
+  // Создание заголовка
+  const title = document.createElement('h2');
+  title.className = 'warranty__title';
+  title.textContent = data.title;
+  textBlock.appendChild(title);
+
+  // Создание абзаца
+  data.texts.forEach(text => {
+    const copy = document.createElement('p');
+    copy.className = 'warranty__copy';
+    copy.textContent = text;
+    textBlock.appendChild(copy);
+  });
+
+  // Создание блока изображения
+  const imageBlock = document.createElement('div');
+  imageBlock.className = 'warranty__image-block';
+  wrapper.appendChild(imageBlock);
+
+  // Изображение
+  const image = document.createElement('img');
+  image.src = data.image.source;
+  image.alt = data.image.description;
+  imageBlock.appendChild(image);
+
+  // Добавление секции на страницу
+  document.body.appendChild(section);
+}
+
 createDownloadSection(download);
+createWarrantySection(warranty);
