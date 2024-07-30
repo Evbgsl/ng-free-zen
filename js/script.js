@@ -188,13 +188,13 @@ function createCashbackSection(data) {
 }
 
 
-const appDiv = document.querySelector('.app.light');
+const appDiv = document.getElementById('theme-switcher');
 if (appDiv) {
   appDiv.appendChild(createDownloadSection(download));
   appDiv.appendChild(createWarrantySection(warranty));
   appDiv.appendChild(createCareSection(care));
   appDiv.appendChild(createCashbackSection(cashback));
 } else {
-  console.error('Div с классом "app light" не найден.');
+  console.error('Div с идентификатором "theme-switcher" не найден.');
 }
 
