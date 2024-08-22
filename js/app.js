@@ -1,6 +1,14 @@
-import {primaryInfo, download, warranty, care, cashback, clients, secondaryInfo} from './data.js';
+import {
+  primaryInfo,
+  download,
+  warranty,
+  care,
+  cashback,
+  clients,
+  secondaryInfo,
+} from './data.js';
 
-function createDownloadSection(data) {
+const createDownloadSection = (data) => {
   // Создание секции
   const section = document.createElement('section');
   section.className = 'download';
@@ -58,7 +66,7 @@ function createDownloadSection(data) {
   return section;
 }
 
-function createWarrantySection(data) {
+const createWarrantySection = (data) => {
   // Создание секции
   const section = document.createElement('section');
   section.className = 'warranty';
@@ -102,7 +110,7 @@ function createWarrantySection(data) {
   return section;
 }
 
-function createCareSection(data) {
+const createCareSection = (data) => {
   // Создание секции
   const section = document.createElement('section');
   section.className = 'care';
@@ -146,7 +154,7 @@ function createCareSection(data) {
   return section;
 }
 
-function createCashbackSection(data) {
+const createCashbackSection = (data) => {
   // Создание секции
   const section = document.createElement('section');
   section.className = 'cashback';
@@ -186,7 +194,6 @@ function createCashbackSection(data) {
 
   return section;
 }
-
 
 const appDiv = document.getElementById('theme-switcher');
 if (appDiv) {
