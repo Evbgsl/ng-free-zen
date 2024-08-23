@@ -1,1 +1,1 @@
-export {ThemeLogo} from './ThemeLogo.js';
+export { ThemeLogo } from './ThemeLogo.js';

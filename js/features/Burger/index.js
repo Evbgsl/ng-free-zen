@@ -1,1 +1,1 @@
-export {Burger} from './Burger.js';
+export { Burger } from './Burger.js';

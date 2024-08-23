@@ -18,4 +18,4 @@ export const Title = (data, className) => {
     case 2: return `<h2 class="${className}">${data.content}</h2>`;
     default: return `<h1 class="${className}">${data.content}</h1>`;
   }
-}
+};

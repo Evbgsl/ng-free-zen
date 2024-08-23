@@ -1,1 +1,1 @@
-export {IconApple} from './IconApple.js';
+export { IconApple } from './IconApple.js';

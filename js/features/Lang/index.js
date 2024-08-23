@@ -1,1 +1,1 @@
-export {Lang} from './Lang.js';
+export { Lang } from './Lang.js';

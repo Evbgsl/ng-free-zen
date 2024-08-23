@@ -19,6 +19,4 @@ export const Link = (data, className) => `
     ${data.name === 'apple' ? IconApple() : ''}
     ${data.name === 'google' ? IconGoogle() : ''}
   </a>
-`
-
-
+`;

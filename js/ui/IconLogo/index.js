@@ -1,1 +1,1 @@
-export {IconLogo} from './IconLogo.js';
+export { IconLogo } from './IconLogo.js';

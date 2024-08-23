@@ -10,8 +10,8 @@ import { Burger } from '../../features/Burger/index.js';
 
 /**
  * @function Header
- * @param { HeaderData } data
- * @returns { string } HTML
+ * @param {HeaderData} data
+ * @returns {string} HTML
  */
 
 export const Header = (data) => `
@@ -23,11 +23,11 @@ export const Header = (data) => `
       </nav>
       <div class="header__actions">
         <label class="header__lang">
-        ${Lang(data.langs)}
+          ${Lang(data.langs)}
         </label>
         ${Theme('header__theme')}
         ${Burger('burger')}
       </div>
     </div>
   </header>
-`
+`;

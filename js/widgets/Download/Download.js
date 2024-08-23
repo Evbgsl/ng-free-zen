@@ -2,7 +2,6 @@ import { Title } from '../../ui/Title/index.js';
 import { Link } from '../../ui/Link/index.js';
 import { Image } from '../../ui/Image/index.js';
 
-
 /**
  * @typedef {import('./types').DownloadData} DownloadData
  */
@@ -32,4 +31,4 @@ export const Download = (data) => {
         </div>
       </section>
   `
-}
+};

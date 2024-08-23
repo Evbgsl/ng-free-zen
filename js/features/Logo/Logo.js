@@ -3,7 +3,7 @@ import { IconLogo } from "../../ui/IconLogo/index.js";
 /**
  * @function Logo
  * @param {string} className
- * @returns { string } HTML
+ * @returns {string} HTML
  */
 
 export const Logo = (className) => `
