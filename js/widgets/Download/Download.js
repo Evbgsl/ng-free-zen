@@ -1,6 +1,6 @@
-import { Title } from '../../ui/Title/Title.js';
-import { Link } from '../../ui/Link/Link.js';
-import { Image } from '../../ui/Image/Image.js';
+import { Title } from '../../ui/Title/index.js';
+import { Link } from '../../ui/Link/index.js';
+import { Image } from '../../ui/Image/index.js';
 
 
 /**
@@ -14,7 +14,7 @@ import { Image } from '../../ui/Image/Image.js';
 */
 
 export const Download = (data) => {
-  const {title, texts, links, image} = data;
+  const {title, texts, links, image} = data
 
   return `
       <section class="download" id="download">
@@ -31,5 +31,5 @@ export const Download = (data) => {
           </div>
         </div>
       </section>
-  `;
+  `
 }
