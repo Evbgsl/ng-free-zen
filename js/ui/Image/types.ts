@@ -1,4 +1,4 @@
-export type MyImageData = {
+export type ImageData = {
   source: string;
   description: string;
 };

@@ -1,10 +1,10 @@
 /**
- * @typedef { import("./types").MyImageData } MyImageData
+ * @typedef { import("./types").ImageData } ImageData
  */
 
 /**
  * @function Image
- * @param {MyImageData} data
+ * @param {ImageData} data
  * @returns {string} HTML
  */
 
