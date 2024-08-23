@@ -1,11 +1,11 @@
-@import 'config/reset'; 
+@import 'config/reset';
 @import 'config/breakpoints';
 @import 'config/common-vars';
 @import 'config/theme-vars';
 @import 'utils/mixins';
 @import 'config/global';
 @import 'config/fonts';
-@import 'features/menu';
+@import 'features/nav';
 @import 'features/burger';
 @import 'ui/column';
 @import 'widgets/header';
