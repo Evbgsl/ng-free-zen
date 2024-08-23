@@ -19,4 +19,4 @@ export const Lang = (LangList) => `
       </option>
     `).join('')}
   </select>
-`
+`;

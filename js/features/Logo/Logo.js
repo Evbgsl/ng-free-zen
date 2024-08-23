@@ -13,4 +13,4 @@ export const Logo = (className) => `
   >
     ${IconLogo()}
   </button>
-`
+`;

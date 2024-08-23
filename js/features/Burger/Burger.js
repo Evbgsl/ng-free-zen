@@ -11,4 +11,4 @@ export const Burger = (className) => `
   >
     <span></span>
   </button>
-`
+`;
