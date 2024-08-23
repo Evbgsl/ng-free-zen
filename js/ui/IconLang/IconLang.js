@@ -1,6 +1,6 @@
 /**
  * @function IconLang
- * @returns { string } HTML
+ * @returns {string} HTML
  */
 
 export const IconLang = () => `
