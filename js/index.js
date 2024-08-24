@@ -1,6 +1,6 @@
 import { data } from './data.js';
-import { Header } from './widgets/Header/Header.js';
-import { Download } from './widgets/Download/Download.js';
+import { Header } from './widgets/Header/index.js';
+import { Download } from './widgets/Download/index.js';
 
 const $root = document.querySelector('#root');
 

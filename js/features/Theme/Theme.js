@@ -1,4 +1,4 @@
-import { ThemeLogo } from "../../ui/ThemeLogo/index.js";
+import { ThemeLogo } from '../../ui/ThemeLogo/index.js';
 
 /**
  * @function Theme
