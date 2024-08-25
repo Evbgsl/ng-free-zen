@@ -1,5 +1,5 @@
-import { IconApple } from '../IconApple/IconApple.js';
-import { IconGoogle } from '../IconGoogle/IconGoogle.js';
+import { IconApple } from '../IconApple/index.js';
+import { IconGoogle } from '../IconGoogle/index.js';
 
 /**
  * @typedef {import('./types').LinkData} LinkData
@@ -20,5 +20,3 @@ export const Link = (data, className) => `
     ${data.name === 'google' ? IconGoogle() : ''}
   </a>
 `;
-
-

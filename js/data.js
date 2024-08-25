@@ -280,9 +280,4 @@ export const data = {
       }
     },
   },
-}
-
-
-
-
-
+};

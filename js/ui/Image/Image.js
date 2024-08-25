@@ -13,4 +13,4 @@ export const Image = (data) => `
     src="${data.source}"
     alt="${data.description}"
   />
-`
+`;
