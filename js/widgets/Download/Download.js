@@ -10,7 +10,7 @@ import { Image } from '../../ui/Image/index.js';
  * @function Download
  * @param {DownloadData} data
  * @returns {string} HTML
-*/
+ */
 
 export const Download = (data) => {
   const {title, texts, links, image} = data
