@@ -11,12 +11,14 @@ import { IconLang } from '../../ui/IconLang/index.js';
  */
 
 export const Lang = (LangList) => `
-  ${IconLang()}
-  <select id="lang">
-    ${LangList.map((langItem) => `
-      <option value="${langItem.key}">
-        ${langItem.name}
-      </option>
-    `).join('')}
-  </select>
+  <label class="header__lang">
+    ${IconLang()}
+    <select id="lang">
+      ${LangList.map((langItem) => `
+        <option value="${langItem.key}">
+          ${langItem.name}
+        </option>
+      `).join('')}
+    </select>
+  </label>
 `;

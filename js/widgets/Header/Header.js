@@ -22,9 +22,7 @@ export const Header = (data) => `
         ${Navigation(data.navigation)}
       </nav>
       <div class="header__actions">
-        <label class="header__lang">
-          ${Lang(data.langs)}
-        </label>
+        ${Lang(data.langs)}
         ${Theme('header__theme')}
         ${Burger('burger')}
       </div>
