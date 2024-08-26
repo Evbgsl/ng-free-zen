@@ -1,4 +1,5 @@
 import { Title } from '../../ui/Title/index.js';
+import { Button } from '../../ui/Button/index.js';
 
 /**
  * @typedef {import('./types').CashbackData} CashbackData
@@ -11,17 +12,15 @@ import { Title } from '../../ui/Title/index.js';
  */
 
 export const Cashback = (data) => {
-  const {title, texts, image} = data;
+  const {title, texts, buttonText} = data;
 
   return `
-    <section class="warranty" id="warranty">
-      <div class="warranty__wrapper">
-        <div class="warranty__text-block">
-          ${Title(title, 'warranty__title')}
-          ${texts.map((text) => `<p class="warranty__copy">${text}</p>`).join('')}
-        </div>
-        <div class="warranty__image-block">
-          ${Image(image)}
+    <section class="cashback" id="cashback">
+      <div class="cashback__wrapper">
+        <div class="cashback__text-block">
+          ${Title(title, 'cashback__title')}
+          ${texts.map((text) => `<p class="cashback__copy">${text}</p>`).join('')}
+          ${Button(buttonText, 'cashback__button')}
         </div>
       </div>
     </section>
