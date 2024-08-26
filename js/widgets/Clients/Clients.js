@@ -24,6 +24,3 @@ export const Clients = (clientList) => `
     </div>
   </section>
 `;
-
-
-
