@@ -70,7 +70,10 @@ export const data = {
     },
   },
   care: {
-    title: 'ZEN Care',
+    title: {
+      content: 'ZEN Care',
+      priority: 2,
+    },
     texts: [
       'Shopping online is usually a delightful experience. Until it is not.',
       'Until something you buy, proves to be faulty, missing or a totally wrong item, you’re in for long product return procedures.',
