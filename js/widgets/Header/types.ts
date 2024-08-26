@@ -1,5 +1,5 @@
-import { LangItemData } from '../../features/Lang/types.js';
-import { NavItemData } from '../../features/Navigation/types.js';
+import { LangItemData } from '../../features/Lang/types';
+import { NavItemData } from '../../features/Navigation/types';
 
 export type HeaderData = {
   langs: LangItemData[];
