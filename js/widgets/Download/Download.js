@@ -13,7 +13,7 @@ import { Image } from '../../ui/Image/index.js';
  */
 
 export const Download = (data) => {
-  const {title, texts, links, image} = data
+  const {title, texts, links, image} = data;
 
   return `
     <section class="download" id="download">
@@ -30,5 +30,5 @@ export const Download = (data) => {
         </div>
       </div>
     </section>
-  `
+  `;
 };
