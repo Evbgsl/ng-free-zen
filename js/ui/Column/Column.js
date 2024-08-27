@@ -18,7 +18,7 @@ export const Column = (data) => {
       <ul class="column__list">
         ${links.map((link) => (
           `<li class="column__item">
-            ${LinkFooter(link)}
+              ${LinkFooter(link)}
           </li>`)
         ).join('')}
       </ul>

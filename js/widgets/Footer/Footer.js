@@ -9,6 +9,7 @@ import { FooterDev } from '../../ui/FooterDev/index.js';
 /**
  * @function Footer
  * @param {FooterData} data
+ * @returns {string} HTML
  */
 
 export const Footer = (data) => {
@@ -27,8 +28,6 @@ export const Footer = (data) => {
           ${texts.map((text) => `<p class="footer__copy">${text}</p>`).join('')}
           ${FooterDev(developer)}
         </div>
-      </div>
-          <!-- Footer info -->
       </div>
     </footer>
   `;

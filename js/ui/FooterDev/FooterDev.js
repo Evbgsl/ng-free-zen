@@ -15,4 +15,3 @@ export const FooterDev = (data) => `
     ${FooterDevLogo()}
   </a>
 `;
-
