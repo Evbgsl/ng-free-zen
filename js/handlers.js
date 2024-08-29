@@ -1,4 +1,3 @@
-
 import { ThemeLightMoonLogo } from './ui/ThemeLightMoonLogo/index.js';
 import { ThemeDarkSunLogo } from './ui/ThemeDarkSunLogo/index.js';
 
