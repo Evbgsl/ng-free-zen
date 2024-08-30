@@ -1,9 +1,9 @@
 /**
- * @function ThemeDarkSunLogo
+ * @function IconSun
  * @returns {string} HTML
  */
 
-export const ThemeDarkSunLogo = () => `
+export const IconSun = () => `
   <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M14.9856 3.00258C14.9612 3.00704 14.9367 3.01373 14.9145 3.02041C14.6499 3.08061 14.4631 3.31917 14.4698 3.59117V7.01571C14.4676

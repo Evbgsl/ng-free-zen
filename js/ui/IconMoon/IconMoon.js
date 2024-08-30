@@ -1,9 +1,9 @@
 /**
- * @function ThemeLightMoonLogo
+ * @function IconMoon
  * @returns {string} HTML
  */
 
-export const ThemeLightMoonLogo = () => `
+export const IconMoon = () => `
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M23.9999 19.314C8.10542 22.1253 2.68539 9.23676 12.2615 0C-1.80277 0.644425 -1.87046
