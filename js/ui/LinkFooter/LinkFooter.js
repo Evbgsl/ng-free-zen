@@ -13,8 +13,8 @@ import { IconLinkedIn } from '../../ui/IconLinkedIn/index.js';
 export const LinkFooter = (data) => `
   ${data.content.type === 'text'
     ? `<a href="${data.url}">${data.content.data}</a>`
-    : ''}
+    : ''};
   ${data.content.type === 'image'
     ? `<a href="${data.url}">${IconLinkedIn()}</a>`
-    : ''}
+    : ''};
 `;
