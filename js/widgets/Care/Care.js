@@ -12,7 +12,7 @@ import { Image } from '../../ui/Image/index.js';
  */
 
 export const Care = (data) => {
-  const {title, texts, image} = data;
+  const { title, texts, image } = data;
 
   return `
     <section class="care" id="care">

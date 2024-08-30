@@ -1,1 +1,1 @@
-export {Cashback} from './Cashback.js'
+export {Cashback} from './Cashback.js';
