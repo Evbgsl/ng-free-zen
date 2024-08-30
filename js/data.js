@@ -57,7 +57,10 @@ export const data = {
     },
   },
   warranty: {
-    title: '1-year warranty boost',
+    title: {
+      content: '1-year warranty boost',
+      priority: 2,
+    },
     texts: [
       'ZEN cards have a very neat feature that will help you whenever your electronic devices start failing after the standard warranty ends, which is pretty common.',
       'When you buy any electronics with your ZEN shopping Mastercard, their warranty gets extended by one year. How does it work? It simply does. Automatically'],
@@ -67,7 +70,10 @@ export const data = {
     },
   },
   care: {
-    title: 'ZEN Care',
+    title: {
+      content: 'ZEN Care',
+      priority: 2,
+    },
     texts: [
       'Shopping online is usually a delightful experience. Until it is not.',
       'Until something you buy, proves to be faulty, missing or a totally wrong item, you’re in for long product return procedures.',
@@ -79,7 +85,10 @@ export const data = {
     },
   },
   cashback: {
-    title: 'and cashback!',
+    title: {
+      content: 'and cashback!',
+      priority: 2,
+    },
     texts: [
       'It saves a little bit of money while you’re shopping, but in many cases it takes ages to get anything out of it.',
       'We gave it a thought and made cashback way more friendly.',
@@ -91,43 +100,43 @@ export const data = {
     brands: [
       {
         name: 'Rosegal',
-        lightSource: './assets/brands/light/2.svg',
-        darkSource: './assets/brands/dark/2.svg',
+        lightSource: './assets/brands/1/light.svg',
+        darkSource: './assets/brands/1/dark.svg',
       },
       {
         name: 'Gearbest',
-        lightSource: './assets/brands/light/2.svg',
-        darkSource: './assets/brands/dark/2.svg',
+        lightSource: './assets/brands/2/light.svg',
+        darkSource: './assets/brands/2/dark.svg',
       },
       {
         name: 'Allegro',
-        lightSource: './assets/brands/light/3.svg',
-        darkSource: './assets/brands/dark/3.svg',
+        lightSource: './assets/brands/3/light.svg',
+        darkSource: './assets/brands/3/dark.svg',
       },
       {
         name: 'Aliexpress',
-        lightSource: './assets/brands/light/4.svg',
-        darkSource: './assets/brands/dark/4.svg',
+        lightSource: './assets/brands/4/light.svg',
+        darkSource: './assets/brands/4/dark.svg',
       },
       {
         name: 'Booking.com',
-        lightSource: './assets/brands/light/5.svg',
-        darkSource: './assets/brands/dark/5.svg',
+        lightSource: './assets/brands/5/light.svg',
+        darkSource: './assets/brands/5/dark.svg',
       },
       {
         name: 'MediaMarkt',
-        lightSource: './assets/brands/light/6.svg',
-        darkSource: './assets/brands/dark/6.svg',
+        lightSource: './assets/brands/6/light.svg',
+        darkSource: './assets/brands/6/dark.svg',
       },
       {
         name: 'RTVeuroAGD',
-        lightSource: './assets/brands/light/7.svg',
-        darkSource: './assets/brands/dark/7.svg',
+        lightSource: './assets/brands/7/light.svg',
+        darkSource: './assets/brands/7/dark.svg',
       },
       {
         name: 'Groupon',
-        lightSource: './assets/brands/light/8.svg',
-        darkSource: './assets/brands/dark/8.svg',
+        lightSource: './assets/brands/8/light.svg',
+        darkSource: './assets/brands/8/dark.svg',
       },
     ]
   },
@@ -264,12 +273,12 @@ export const data = {
       },
     ],
     texts: [
-      'Some paragraph 1',
-      'Some paragraph 2',
-      'Some paragraph 3',
-      'Some paragraph 4',
-      'Some paragraph 5',
-      'Some paragraph 6',
+      'ZEN is a licensed financial institution under the supervision of the Central Bank of Lithuania approved by European Banking Authority for 31 countries.',
+      'Registration number of the company 304749651, VAT ID LT100011714916.',
+      'License of electronic money institutions number LB000457.',
+      'Share capital 2.185.000,00 EUR.',
+      'Company address: Mėsinių g. 5, LT-01133, Vilnius, Lithuania.',
+      'Sales Office: ul. Emilii Plater 53, 00-113 Warsaw, Poland.',
     ],
     developer: {
       url: 'https://example.com',
