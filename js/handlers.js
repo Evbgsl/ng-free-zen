@@ -1,3 +1,4 @@
+import { IconLogo } from './ui/IconLogo/IconLogo.js';
 import { IconMoon } from './ui/IconMoon/index.js';
 import { IconSun } from './ui/IconSun/index.js';
 
@@ -11,16 +12,17 @@ export const handleThemeClick = (event) => {
   const  $themeBtn = event.currentTarget;
   const theme = $themeBtn?.dataset.theme;
   const $root = document.querySelector('#root');
-  if (theme === 'light') {
-    $themeBtn.dataset.theme = 'dark';
-    $themeBtn.innerHTML = IconSun();
-    $root?.classList.add('dark');
-    $root?.classList.remove('light');
-  };
-  if (theme === 'dark') {
-    $themeBtn.dataset.theme = 'light';
-    $themeBtn.innerHTML = IconMoon();
-    $root?.classList.add('light');
-    $root?.classList.remove('dark');
-  };
+  const $iconLogo = document.querySelector('#logo');
+
+  const brands = document.querySelectorAll('#brand');
+
+  const isLightTheme = theme === 'light';
+
+  $themeBtn.dataset.theme = isLightTheme ? 'dark' : 'light';
+  $themeBtn.innerHTML = isLightTheme ? IconSun() : IconMoon();
+
+  $root?.classList.toggle('dark', isLightTheme);
+  $root?.classList.toggle('light', !isLightTheme);
+
+  if ($iconLogo) $iconLogo.innerHTML = IconLogo();
 };
