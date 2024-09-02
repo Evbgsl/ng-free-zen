@@ -9,20 +9,35 @@ import { IconSun } from './ui/IconSun/index.js';
 
 export const handleThemeClick = (event) => {
   /** @type { * | EventTarget } */
-  const  $themeBtn = event.currentTarget;
+  const $themeBtn = event.currentTarget;
   const theme = $themeBtn?.dataset.theme;
   const $root = document.querySelector('#root');
   const $iconLogo = document.querySelector('#logo');
+  const $brandElements = document.querySelectorAll('[data-id="brand"]');
 
-  const brands = document.querySelectorAll('#brand');
+  const clientBrandsString = localStorage.getItem('brands');
+  const clientBrands = clientBrandsString ? JSON.parse(clientBrandsString) : [];
 
   const isLightTheme = theme === 'light';
+  const newTheme = isLightTheme ? 'dark' : 'light';
 
-  $themeBtn.dataset.theme = isLightTheme ? 'dark' : 'light';
-  $themeBtn.innerHTML = isLightTheme ? IconSun() : IconMoon();
+  $themeBtn.dataset.theme = newTheme;
+  $themeBtn.innerHTML = newTheme === 'light' ? IconMoon() : IconSun();
 
-  $root?.classList.toggle('dark', isLightTheme);
-  $root?.classList.toggle('light', !isLightTheme);
+  if ($root) {
+    $root.classList.remove('dark', 'light');
+    $root.classList.add(newTheme);
+  }
 
-  if ($iconLogo) $iconLogo.innerHTML = IconLogo();
+  if ($iconLogo) {
+    $iconLogo.innerHTML = IconLogo();
+  }
+
+  $brandElements.forEach(($element, index) => {
+    if ($element instanceof HTMLImageElement && clientBrands[index]) {
+      $element.src = isLightTheme
+      ? clientBrands[index].darkSource
+      : clientBrands[index].lightSource;
+    };
+  });
 };

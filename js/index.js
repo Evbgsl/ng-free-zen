@@ -8,6 +8,8 @@ import { Clients } from './widgets/Clients/index.js';
 import { Footer } from './widgets/Footer/index.js';
 import { handleThemeClick } from './handlers.js';
 
+localStorage.setItem('brands', JSON.stringify(data.clients.brands));
+
 const $root = document.querySelector('#root');
 
 $root?.insertAdjacentHTML('beforeend', Header(data.primaryInfo));
