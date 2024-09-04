@@ -35,3 +35,29 @@ export const onThemeClick = (event, brandsFromAPI) => {
       : brandsFromAPI[index].darkSource;
   });
 };
+
+/**
+ * @function onLogoClick
+ * @description In anonymous handler
+ */
+
+export const onLogoClick = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+};
+
+/**
+ * @function onBurgerClick
+ * @description In anonymous handler
+ * @param {Event} event
+ */
+
+export const onBurgerClick = (event) => {
+  const $burgerBtn = /** @type { HTMLElement | null } */ (event.currentTarget);
+  if ($burgerBtn) {
+    // Переключаем класс "active"
+    $burgerBtn.classList.toggle('active');
+  }
+};
