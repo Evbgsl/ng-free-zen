@@ -1,43 +1,37 @@
-import { IconLogo } from './ui/IconLogo/IconLogo.js';
 import { IconMoon } from './ui/IconMoon/index.js';
 import { IconSun } from './ui/IconSun/index.js';
 
 /**
- * @function handleThemeClick
- * @param {Event} event
+ * @typedef {import ('./widgets/Clients/types.js').BrandFromAPI} BrandFromAPI
  */
 
-export const handleThemeClick = (event) => {
-  /** @type { * | EventTarget } */
-  const $themeBtn = event.currentTarget;
-  const theme = $themeBtn?.dataset.theme;
+/**
+ * @function onThemeClick
+ * @description In anonymous handler
+ * @param {Event} event
+ * @param {BrandFromAPI[]} brandsFromAPI
+ */
+
+export const onThemeClick = (event, brandsFromAPI) => {
+  /** @type { NodeListOf<HTMLImageElement> } */
+  const $brandNodes = document.querySelectorAll('[data-id="brand"]');
+  const $themeBtn = /** @type { HTMLElement | null } */ (event.currentTarget);
+  /** @type { HTMLElement | null } */
   const $root = document.querySelector('#root');
-  const $iconLogo = document.querySelector('#logo');
-  const $brandElements = document.querySelectorAll('[data-id="brand"]');
 
-  const clientBrandsString = localStorage.getItem('brands');
-  const clientBrands = clientBrandsString ? JSON.parse(clientBrandsString) : [];
+  if (!$brandNodes || !$themeBtn || !$root) return;
 
-  const isLightTheme = theme === 'light';
-  const newTheme = isLightTheme ? 'dark' : 'light';
+  const currentTheme = $themeBtn?.dataset.theme;
+  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
 
   $themeBtn.dataset.theme = newTheme;
   $themeBtn.innerHTML = newTheme === 'light' ? IconMoon() : IconSun();
 
-  if ($root) {
-    $root.classList.remove('dark', 'light');
-    $root.classList.add(newTheme);
-  }
+  $root.dataset.theme = newTheme;
 
-  if ($iconLogo) {
-    $iconLogo.innerHTML = IconLogo();
-  }
-
-  $brandElements.forEach(($element, index) => {
-    if ($element instanceof HTMLImageElement && clientBrands[index]) {
-      $element.src = isLightTheme
-      ? clientBrands[index].darkSource
-      : clientBrands[index].lightSource;
-    };
+  $brandNodes.forEach(($element, index) => {
+      $element.src = newTheme === 'light'
+        ? brandsFromAPI[index].lightSource
+        : brandsFromAPI[index].darkSource;
   });
 };
