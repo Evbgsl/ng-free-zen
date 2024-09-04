@@ -21,7 +21,7 @@ export const onThemeClick = (event, brandsFromAPI) => {
 
   if (!$brandNodes || !$themeBtn || !$root) return;
 
-  const currentTheme = $themeBtn?.dataset.theme;
+  const currentTheme = $themeBtn.dataset.theme;
   const newTheme = currentTheme === 'light' ? 'dark' : 'light';
 
   $themeBtn.dataset.theme = newTheme;
