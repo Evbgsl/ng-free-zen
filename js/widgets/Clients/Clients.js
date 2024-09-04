@@ -1,18 +1,18 @@
 /**
- * @typedef {import ('./types').ClientsData} ClientsData
+ * @typedef {import ('./types').BrandDataFromAPI} BrandDataFromAPI
  */
 
 /**
  * @function Clients
- * @param {ClientsData} clientList
+ * @param {BrandDataFromAPI} brandList
  * @returns {string} HTML
  */
 
-export const Clients = (clientList) => `
+export const Clients = (brandList) => `
   <section class="clients" id="clients">
     <div class="clients__wrapper">
       <ul class="clients__brands" id="brands">
-        ${clientList.brands.map((brand) => `
+        ${brandList.brands.map((brand) => `
           <li class="clients__brand">
             <img src="${brand.lightSource}"
               alt="${brand.name}"
