@@ -45,7 +45,7 @@ input {
   border: 0;
 }
 
-.app.light {
+.root[data-theme=light] {
   --color-primary: #000;
   --text-footer-color: #fff;
   --border-color-primary: #aaa;
@@ -55,7 +55,8 @@ input {
   --bg-modal: rgba(0, 0, 0, 0.5);
   --icon-color: black;
 }
-.app.dark {
+
+.root[data-theme=dark] {
   --color-primary: #fff;
   --text-footer-color: #fff;
   --border-color-primary: #fff;
@@ -71,7 +72,7 @@ body {
   padding-top: 50px;
   font-family: "Nunito", sans-serif;
 }
-body .app {
+body .root {
   background: var(--bg-primary);
 }
 
