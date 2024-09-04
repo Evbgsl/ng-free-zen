@@ -30,8 +30,8 @@ export const onThemeClick = (event, brandsFromAPI) => {
   $root.dataset.theme = newTheme;
 
   $brandNodes.forEach(($element, index) => {
-      $element.src = newTheme === 'light'
-        ? brandsFromAPI[index].lightSource
-        : brandsFromAPI[index].darkSource;
+    $element.src = newTheme === 'light'
+      ? brandsFromAPI[index].lightSource
+      : brandsFromAPI[index].darkSource;
   });
 };
