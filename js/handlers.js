@@ -2,7 +2,7 @@ import { IconMoon } from './ui/IconMoon/index.js';
 import { IconSun } from './ui/IconSun/index.js';
 
 /**
- * @typedef {import ('./widgets/Clients/types.js').BrandFromAPI} BrandFromAPI
+ * @typedef {import ('./widgets/Clients/types').BrandFromAPI} BrandFromAPI
  */
 
 /**
@@ -25,7 +25,9 @@ export const onThemeClick = (event, brandsFromAPI) => {
   const newTheme = currentTheme === 'light' ? 'dark' : 'light';
 
   $themeBtn.dataset.theme = newTheme;
-  $themeBtn.innerHTML = newTheme === 'light' ? IconMoon() : IconSun();
+  $themeBtn.innerHTML = newTheme === 'light'
+    ? IconMoon()
+    : IconSun();
 
   $root.dataset.theme = newTheme;
 

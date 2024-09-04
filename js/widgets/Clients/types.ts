@@ -4,6 +4,6 @@ export type BrandFromAPI = {
   darkSource: string;
 };
 
-export type BrandDataFromAPI = {
+export type ClientsDataFromAPI  = {
   brands: BrandFromAPI[];
 };
