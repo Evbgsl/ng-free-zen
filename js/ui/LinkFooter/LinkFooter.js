@@ -6,15 +6,15 @@ import { IconLinkedIn } from '../../ui/IconLinkedIn/index.js';
 
 /**
  * @function Link
- * @param {LinkDataFooter} data
+ * @param {LinkDataFooter} link
  * @returns {string} HTML
  */
 
-export const LinkFooter = (data) => `
-  ${data.content.type === 'text'
-    ? `<a href="${data.url}">${data.content.data}</a>`
+export const Link = (link) => `
+  ${link.content.type === 'text'
+    ? `<a href="${link.url}">${link.content.data}</a>`
     : ''}
-  ${data.content.type === 'image'
-    ? `<a href="${data.url}">${IconLinkedIn()}</a>`
+  ${link.content.type === 'image'
+    ? `<a href="${link.url}">${IconLinkedIn()}</a>`
     : ''}
 `;
