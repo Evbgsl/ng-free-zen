@@ -1,4 +1,4 @@
-import { LinkFooter } from '../LinkFooter/index.js';
+import { Link } from '../LinkFooter/index.js';
 
 /**
  * @typedef {import ('./types').CategoriesData} CategoriesData
@@ -20,7 +20,7 @@ export const Column = (data) => {
       <ul class="column__list">
         ${links.map((link) => `
           <li class="column__item">
-            ${LinkFooter(link)}
+            ${Link(link)}
           </li>
         `).join('')}
       </ul>
