@@ -2,6 +2,18 @@ import { IconMoon } from './ui/IconMoon/index.js';
 import { IconSun } from './ui/IconSun/index.js';
 
 /**
+ * @function onLogoClick
+ * @description In anonymous handler
+ */
+
+export const onLogoClick = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+};
+
+/**
  * @typedef {import ('./widgets/Clients/types').BrandFromAPI} BrandFromAPI
  */
 
@@ -42,18 +54,6 @@ export const onThemeClick = (event, brandsFromAPI) => {
 };
 
 /**
- * @function onLogoClick
- * @description In anonymous handler
- */
-
-export const onLogoClick = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-};
-
-/**
  * @function onBurgerClick
  * @description In anonymous handler
  * @param {Event} event
@@ -61,7 +61,10 @@ export const onLogoClick = () => {
 
 export const onBurgerClick = (event) => {
   const $burgerBtn = /** @type { HTMLElement | null } */ (event.currentTarget);
-  if ($burgerBtn) {
-    $burgerBtn.classList.toggle('active');
-  }
+  const $navMenu = /** @type { HTMLElement | null } */ document.querySelector('#nav');
+
+  if (!$burgerBtn || !$navMenu) return;
+
+  $burgerBtn.classList.toggle('active');
+  $navMenu.classList.toggle('active');
 };

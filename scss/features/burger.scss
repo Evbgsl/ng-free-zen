@@ -12,6 +12,7 @@
     height: 2px;
     background: var(--icon-color);
     position: absolute;
+    transition: all 0.5s ease;
   }
 
   &::before {
@@ -23,6 +24,7 @@
     width: 100%;
     height: 2px;
     background: var(--icon-color);
+    transition: opacity 0.4s ease;
   }
 
   &::after {
@@ -35,17 +37,15 @@
     &::before{
       top: 50%;
       transform: translateY(-50%) rotate(45deg);
-      transition: all 1s;
     }
 
     span{
-      display: none;
+      opacity: 0;
     }
 
     &::after{
       bottom: 50%;
       transform: translateY(50%) rotate(-45deg);
-      transition: all 1s;
     }
   }
 }
