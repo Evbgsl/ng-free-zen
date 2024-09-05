@@ -1,9 +1,9 @@
-export type Brand = {
+export type BrandFromAPI = {
   name: string;
   lightSource: string;
   darkSource: string;
 };
 
-export type ClientsData = {
-  brands: Brand[];
+export type ClientsDataFromAPI  = {
+  brands: BrandFromAPI[];
 };

@@ -2,25 +2,41 @@ import { IconMoon } from './ui/IconMoon/index.js';
 import { IconSun } from './ui/IconSun/index.js';
 
 /**
- * @function handleThemeClick
- * @param {Event} event
+ * @typedef {import ('./widgets/Clients/types').BrandFromAPI} BrandFromAPI
  */
 
-export const handleThemeClick = (event) => {
-  /** @type { * | EventTarget } */
-  const  $themeBtn = event.currentTarget;
-  const theme = $themeBtn?.dataset.theme;
+/**
+ * @function onThemeClick
+ * @description In anonymous handler
+ * @param {Event} event
+ * @param {BrandFromAPI[]} brandsFromAPI
+ */
+
+export const onThemeClick = (event, brandsFromAPI) => {
+  /** @type { HTMLElement | null } */
   const $root = document.querySelector('#root');
-  if (theme === 'light') {
-    $themeBtn.dataset.theme = 'dark';
-    $themeBtn.innerHTML = IconSun();
-    $root?.classList.add('dark');
-    $root?.classList.remove('light');
-  };
-  if (theme === 'dark') {
-    $themeBtn.dataset.theme = 'light';
-    $themeBtn.innerHTML = IconMoon();
-    $root?.classList.add('light');
-    $root?.classList.remove('dark');
-  };
+
+  const $themeBtn = /** @type { HTMLElement | null } */ (event.currentTarget);
+
+  /** @type { NodeListOf<HTMLImageElement> } */
+  const $brandNodes = document.querySelectorAll('[data-id="brand"]');
+
+  if (!$root || !$themeBtn || !$brandNodes) return;
+
+  const currentTheme = $themeBtn.dataset.theme;
+  const newTheme = currentTheme === 'light'
+    ? 'dark'
+    : 'light';
+
+  $root.dataset.theme = newTheme;
+  $themeBtn.dataset.theme = newTheme;
+  $themeBtn.innerHTML = newTheme === 'light'
+    ? IconMoon()
+    : IconSun();
+
+  $brandNodes.forEach(($element, index) => {
+    $element.src = newTheme === 'light'
+      ? brandsFromAPI[index].lightSource
+      : brandsFromAPI[index].darkSource;
+  });
 };

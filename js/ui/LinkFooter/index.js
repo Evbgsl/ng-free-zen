@@ -1,1 +1,1 @@
-export { LinkFooter } from './LinkFooter.js';
+export { Link } from './Link.js';
