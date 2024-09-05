@@ -1,12 +1,12 @@
 import { IconLinkedIn } from '../../ui/IconLinkedIn/index.js';
 
 /**
- * @typedef {import('./types').LinkDataFooter} LinkDataFooter
+ * @typedef {import('./types').FooterLinkData} FooterLinkData
  */
 
 /**
  * @function Link
- * @param {LinkDataFooter} link
+ * @param {FooterLinkData} link
  * @returns {string} HTML
  */
 

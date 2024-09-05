@@ -3,7 +3,7 @@ type LinkContent = {
   data: string;
 };
 
-export type LinkDataFooter = {
+export type FooterLinkData = {
   url: string;
   content: LinkContent;
 };
