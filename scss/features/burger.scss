@@ -12,7 +12,6 @@
     height: 2px;
     background: var(--icon-color);
     position: absolute;
-    left: 0;
   }
 
   &::before {
@@ -36,17 +35,17 @@
     &::before{
       top: 50%;
       transform: translateY(-50%) rotate(45deg);
-      transition: all 2s;
+      transition: all 1s;
     }
-  
+
     span{
       display: none;
     }
-  
+
     &::after{
       bottom: 50%;
       transform: translateY(50%) rotate(-45deg);
-      transition: all 2s;
+      transition: all 1s;
     }
   }
 }

@@ -59,7 +59,6 @@ export const onLogoClick = () => {
 export const onBurgerClick = (event) => {
   const $burgerBtn = /** @type { HTMLElement | null } */ (event.currentTarget);
   if ($burgerBtn) {
-    // Переключаем класс "active"
     $burgerBtn.classList.toggle('active');
   }
 };
