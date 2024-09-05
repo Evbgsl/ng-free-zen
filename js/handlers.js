@@ -13,23 +13,26 @@ import { IconSun } from './ui/IconSun/index.js';
  */
 
 export const onThemeClick = (event, brandsFromAPI) => {
-  /** @type { NodeListOf<HTMLImageElement> } */
-  const $brandNodes = document.querySelectorAll('[data-id="brand"]');
-  const $themeBtn = /** @type { HTMLElement | null } */ (event.currentTarget);
   /** @type { HTMLElement | null } */
   const $root = document.querySelector('#root');
 
-  if (!$brandNodes || !$themeBtn || !$root) return;
+  const $themeBtn = /** @type { HTMLElement | null } */ (event.currentTarget);
+
+  /** @type { NodeListOf<HTMLImageElement> } */
+  const $brandNodes = document.querySelectorAll('[data-id="brand"]');
+
+  if (!$root || !$themeBtn || !$brandNodes) return;
 
   const currentTheme = $themeBtn.dataset.theme;
-  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+  const newTheme = currentTheme === 'light'
+    ? 'dark'
+    : 'light';
 
+  $root.dataset.theme = newTheme;
   $themeBtn.dataset.theme = newTheme;
   $themeBtn.innerHTML = newTheme === 'light'
     ? IconMoon()
     : IconSun();
-
-  $root.dataset.theme = newTheme;
 
   $brandNodes.forEach(($element, index) => {
     $element.src = newTheme === 'light'
