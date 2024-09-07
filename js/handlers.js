@@ -55,7 +55,7 @@ export const onThemeClick = (event, brandsFromAPI) => {
 };
 
 /**
- * @function handleNavLinkClick
+ * @function handleBurgerClick
  */
 
 export const handleBurgerClick = () => {
