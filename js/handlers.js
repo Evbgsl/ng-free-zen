@@ -10,7 +10,7 @@ import { toggleBurgerAndNav } from './utils/index.js';
 export const handleLogoClick = () => {
   window.scrollTo({
     top: 0,
-    behavior: 'smooth'
+    behavior: 'smooth',
   });
 };
 
@@ -88,7 +88,7 @@ export const handleNavLinkClick = (event) => {
 
     window.scrollBy({
       top: offsetPosition,
-      behavior: 'smooth'
+      behavior: 'smooth',
     });
   }
 };
