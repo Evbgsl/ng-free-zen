@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*reset*/
 *,
 *::before,
@@ -119,7 +118,7 @@ body .root {
   color: var(--color-primary);
 }
 .nav__item a {
-  display: block; /* Растягиваем ссылку на всю ширину элемента */
+  display: block;
   padding: 24px 15px;
 }
 
