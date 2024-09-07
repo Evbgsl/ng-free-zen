@@ -20,7 +20,7 @@ export const handleLogoClick = () => {
 
 /**
  * @function onThemeClick
- * @description In anonymous handler. Changing element colors.
+ * @description In anonymous handler. Changing elements colors.
  * @param {Event} event
  * @param {BrandFromAPI[]} brandsFromAPI
  */
