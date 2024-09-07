@@ -1,5 +1,6 @@
 import { IconMoon } from './ui/IconMoon/index.js';
 import { IconSun } from './ui/IconSun/index.js';
+import { ToggleBurgerAndNav } from './utils/index.js';
 
 /**
  * @function handleLogoClick
@@ -54,26 +55,21 @@ export const onThemeClick = (event, brandsFromAPI) => {
 };
 
 /**
- * @function toggleActive
- * @description Switches the active class of the burger and the navigation menu
+ * @function handleNavLinkClick
  */
 
-export const toggleActive = () => {
-  const $burgerBtn = /** @type { HTMLElement | null } */ document.querySelector('#burger');
-  const $navMenu = /** @type { HTMLElement | null } */ document.querySelector('#nav');
-
-  if (!$burgerBtn || !$navMenu) return;
-
-  $burgerBtn.classList.toggle('active');
-  $navMenu.classList.toggle('active');
+export const handleBurgerClick = () => {
+  ToggleBurgerAndNav();
 };
 
 /**
- * @function adjustScroll
- * @description Sett scrolling with the header height
+ * @function handleNavLinkClick
+ * @description Set scrolling with the header height
  */
 
-export const adjustScroll = (event) => {
+export const handleNavLinkClick = (event) => {
+  ToggleBurgerAndNav();
+
   if (event.target.tagName === 'A') {
     event.preventDefault();
 
@@ -85,9 +81,9 @@ export const adjustScroll = (event) => {
 
     if (!$header || !$targetElement) return;
 
-    const $headerOffset = $header.offsetHeight;
-    const $elementPosition = $targetElement.getBoundingClientRect().top;
-    const offsetPosition = $elementPosition - $headerOffset;
+    const headerOffset = $header.offsetHeight;
+    const elementPosition = $targetElement.getBoundingClientRect().top;
+    const offsetPosition = elementPosition - headerOffset;
 
     window.scrollBy({
       top: offsetPosition,
