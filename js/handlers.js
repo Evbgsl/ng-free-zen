@@ -2,11 +2,11 @@ import { IconMoon } from './ui/IconMoon/index.js';
 import { IconSun } from './ui/IconSun/index.js';
 
 /**
- * @function onLogoClick
- * @description In anonymous handler
+ * @function handleLogoClick
+ * @description Scrolls to the top
  */
 
-export const onLogoClick = () => {
+export const handleLogoClick = () => {
   window.scrollTo({
     top: 0,
     behavior: 'smooth'
@@ -54,17 +54,44 @@ export const onThemeClick = (event, brandsFromAPI) => {
 };
 
 /**
- * @function onBurgerClick
- * @description In anonymous handler
- * @param {Event} event
+ * @function toggleActive
+ * @description Switches the active class of the burger and the navigation menu
  */
 
-export const onBurgerClick = (event) => {
-  const $burgerBtn = /** @type { HTMLElement | null } */ (event.currentTarget);
+export const toggleActive = () => {
+  const $burgerBtn = /** @type { HTMLElement | null } */ document.querySelector('#burger');
   const $navMenu = /** @type { HTMLElement | null } */ document.querySelector('#nav');
 
   if (!$burgerBtn || !$navMenu) return;
 
   $burgerBtn.classList.toggle('active');
   $navMenu.classList.toggle('active');
+};
+
+/**
+ * @function adjustScroll
+ * @description Sett scrolling with the header height
+ */
+
+export const adjustScroll = (event) => {
+  if (event.target.tagName === 'A') {
+    event.preventDefault();
+
+    const $clickedLink = event.target;
+    const targetId = $clickedLink.getAttribute('href').substring(1);
+
+    const $header = /** @type { HTMLElement | null } */ document.querySelector('header');
+    const $targetElement = /** @type { HTMLElement | null } */ document.getElementById(targetId);
+
+    if (!$header || !$targetElement) return;
+
+    const $headerOffset = $header.offsetHeight;
+    const $elementPosition = $targetElement.getBoundingClientRect().top;
+    const offsetPosition = $elementPosition - $headerOffset;
+
+    window.scrollBy({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  }
 };
