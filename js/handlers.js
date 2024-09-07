@@ -1,6 +1,6 @@
 import { IconMoon } from './ui/IconMoon/index.js';
 import { IconSun } from './ui/IconSun/index.js';
-import { ToggleBurgerAndNav } from './utils/index.js';
+import { toggleBurgerAndNav } from './utils/index.js';
 
 /**
  * @function handleLogoClick
@@ -60,7 +60,7 @@ export const onThemeClick = (event, brandsFromAPI) => {
  */
 
 export const handleBurgerClick = () => {
-  ToggleBurgerAndNav();
+  toggleBurgerAndNav();
 };
 
 /**
@@ -69,7 +69,7 @@ export const handleBurgerClick = () => {
  */
 
 export const handleNavLinkClick = (event) => {
-  ToggleBurgerAndNav();
+  toggleBurgerAndNav();
 
   if (event.target.tagName === 'A') {
     event.preventDefault();

@@ -1,1 +1,1 @@
-export { ToggleBurgerAndNav } from './toggleBurgerAndNav.js';
+export { toggleBurgerAndNav } from './toggleBurgerAndNav.js';
