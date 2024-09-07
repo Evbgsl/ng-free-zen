@@ -9,7 +9,7 @@
   overflow: hidden;
   opacity: 0;
   visibility: hidden;
-  background: #fff;
+  background: var(--bg-primary);
   transition: max-height 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
 
   &.active {
@@ -22,6 +22,7 @@
     // padding: 24px 15px;
     font-size: 24px;
     border-bottom: 1px solid #aaa;
+    color: var(--color-primary);
 
     a {
       display: block; /* Растягиваем ссылку на всю ширину элемента */
