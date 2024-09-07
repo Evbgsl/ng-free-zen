@@ -20,7 +20,7 @@ export const handleLogoClick = () => {
 
 /**
  * @function onThemeClick
- * @description In anonymous handler
+ * @description In anonymous handler. Changing element colors.
  * @param {Event} event
  * @param {BrandFromAPI[]} brandsFromAPI
  */
@@ -56,6 +56,7 @@ export const onThemeClick = (event, brandsFromAPI) => {
 
 /**
  * @function handleBurgerClick
+ * @description Toggle burger icon and open/close nav menu.
  */
 
 export const handleBurgerClick = () => {
@@ -64,7 +65,7 @@ export const handleBurgerClick = () => {
 
 /**
  * @function handleNavLinkClick
- * @description Set scrolling with the header height
+ * @description Set scrolling with the header height, hide nav menu.
  */
 
 export const handleNavLinkClick = (event) => {
