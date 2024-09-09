@@ -1,6 +1,6 @@
-import { LinkDataFooter } from '../LinkFooter/types';
+import { FooterLinkData } from '../LinkFooter/types';
 
 export type CategoriesData = {
   name: string;
-  links: LinkDataFooter[];
+  links: FooterLinkData[];
 };

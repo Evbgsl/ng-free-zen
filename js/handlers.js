@@ -92,3 +92,21 @@ export const handleNavLinkClick = (event) => {
     });
   }
 };
+
+/**
+ * @function handleOrderClick
+ * @description Set scrolling with the header height, hide nav menu.
+ */
+
+export const handleOrderClick = () => {
+  const $modal = /** @type { HTMLElement | null } */ document.querySelector('#modal');
+  if (!$modal) return;
+  $modal.classList.add('is-visible');
+};
+
+export const handleCloseClick = () => {
+  const $modal = /** @type { HTMLElement | null } */ document.querySelector('#modal');
+  if (!$modal) return;
+  $modal.classList.remove('is-visible');
+};
+
