@@ -6,7 +6,7 @@ import { Care } from './widgets/Care/index.js';
 import { Cashback } from './widgets/Cashback/index.js';
 import { Clients } from './widgets/Clients/index.js';
 import { Footer } from './widgets/Footer/index.js';
-import { onThemeClick } from './handlers.js';
+import { handleLogoClick, onThemeClick, handleBurgerClick, handleNavLinkClick } from './handlers.js';
 
 const $root = document.querySelector('#root');
 
@@ -18,6 +18,12 @@ $root?.insertAdjacentHTML('beforeend', Cashback(dataFromAPI.cashback));
 $root?.insertAdjacentHTML('beforeend', Clients(dataFromAPI.clients));
 $root?.insertAdjacentHTML('beforeend', Footer(dataFromAPI.secondaryInfo));
 
+const $logoBtn = document.querySelector('#logo');
 const $themeBtn = document.querySelector('#theme');
+const $burgerBtn = document.querySelector('#burger');
+const $navLinks = document.querySelector('#nav');
 
+$logoBtn?.addEventListener('click', handleLogoClick);
 $themeBtn?.addEventListener('click', (event) => onThemeClick(event, dataFromAPI.clients.brands));
+$burgerBtn?.addEventListener('click', handleBurgerClick);
+$navLinks?.addEventListener('click', handleNavLinkClick);

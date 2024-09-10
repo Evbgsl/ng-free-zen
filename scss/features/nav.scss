@@ -1,20 +1,32 @@
 /*nav*/
 
 .nav {
-  display: none;
-  background: #fff;
+  position: fixed;
+  top: 51px;
+  left: 0;
+  max-height: 0;
+  width: 100vw;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  background: var(--bg-primary);
+  transition: max-height 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
 
   &.active {
-    display: block;
-    position: fixed;
-    top: 51px;
-    left: 0;
-    right: 0;
+    max-height: 500px;
+    opacity: 1;
+    visibility: visible;
   }
 
   &__item {
-    padding: 24px 15px;
     font-size: 24px;
     border-bottom: 1px solid #aaa;
+    color: var(--color-primary);
+
+    a {
+      display: block;
+      padding: 24px 15px;
+    }
   }
 }
+

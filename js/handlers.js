@@ -1,5 +1,18 @@
 import { IconMoon } from './ui/IconMoon/index.js';
 import { IconSun } from './ui/IconSun/index.js';
+import { toggleBurgerAndNav } from './utils/index.js';
+
+/**
+ * @function handleLogoClick
+ * @description Scrolls to the top
+ */
+
+export const handleLogoClick = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+};
 
 /**
  * @typedef {import ('./widgets/Clients/types').BrandFromAPI} BrandFromAPI
@@ -7,7 +20,7 @@ import { IconSun } from './ui/IconSun/index.js';
 
 /**
  * @function onThemeClick
- * @description In anonymous handler
+ * @description In anonymous handler. Changing elements colors.
  * @param {Event} event
  * @param {BrandFromAPI[]} brandsFromAPI
  */
@@ -39,4 +52,43 @@ export const onThemeClick = (event, brandsFromAPI) => {
       ? brandsFromAPI[index].lightSource
       : brandsFromAPI[index].darkSource;
   });
+};
+
+/**
+ * @function handleBurgerClick
+ * @description Toggle burger icon and open/close nav menu.
+ */
+
+export const handleBurgerClick = () => {
+  toggleBurgerAndNav();
+};
+
+/**
+ * @function handleNavLinkClick
+ * @description Set scrolling with the header height, hide nav menu.
+ */
+
+export const handleNavLinkClick = (event) => {
+  toggleBurgerAndNav();
+
+  if (event.target.tagName === 'A') {
+    event.preventDefault();
+
+    const $clickedLink = event.target;
+    const targetId = $clickedLink.getAttribute('href').substring(1);
+
+    const $header = /** @type { HTMLElement | null } */ document.querySelector('header');
+    const $targetElement = /** @type { HTMLElement | null } */ document.getElementById(targetId);
+
+    if (!$header || !$targetElement) return;
+
+    const headerOffset = $header.offsetHeight;
+    const elementPosition = $targetElement.getBoundingClientRect().top;
+    const offsetPosition = elementPosition - headerOffset;
+
+    window.scrollBy({
+      top: offsetPosition,
+      behavior: 'smooth',
+    });
+  }
 };
