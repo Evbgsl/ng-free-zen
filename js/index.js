@@ -7,7 +7,15 @@ import { Cashback } from './widgets/Cashback/index.js';
 import { Clients } from './widgets/Clients/index.js';
 import { Footer } from './widgets/Footer/index.js';
 import { Modal } from './widgets/Modal/index.js';
-import { handleLogoClick, onThemeClick, handleBurgerClick, handleNavLinkClick, handleOrderClick, handleCloseClick } from './handlers.js';
+
+import {
+  handleLogoClick,
+  onThemeClick,
+  handleBurgerClick,
+  handleNavLinkClick,
+  handleOrderClick,
+  handleCloseClick,
+} from './handlers.js';
 
 const $root = document.querySelector('#root');
 
