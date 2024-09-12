@@ -132,11 +132,8 @@ export const handleLangChange = (event) => {
   if (!$langSelector || !$root) return;
 
   const selectedLang = $langSelector.value;
+  const data = selectedLang === 'ru' ? dataRuFromApi : dataEnFromApi;
+  $root.innerHTML = App(data);
 
-  if (selectedLang === 'ru') {
-    $root.innerHTML = App(dataRuFromApi);
-  } else if (selectedLang === 'en') {
-    $root.innerHTML = App(dataEnFromApi);
-  }
   AddHadlers();
 };
