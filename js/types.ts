@@ -1,4 +1,7 @@
-// Common types
+/**********************************************
+  Common types
+**********************************************/
+
 export type LinkData = {
   name: string;
   url: string;
@@ -14,7 +17,10 @@ export type ImageData = {
   description: string;
 };
 
-// Sections types
+/**********************************************
+  Header types
+**********************************************/
+
 export type LangItemData = {
   name: string;
   key: string;
@@ -30,6 +36,10 @@ export type HeaderData = {
   navigation: NavItemData[];
 };
 
+/**********************************************
+  Download types
+**********************************************/
+
 export type DownloadData = {
   title: TitleData;
   texts: string[];
@@ -37,11 +47,19 @@ export type DownloadData = {
   image: ImageData;
 };
 
+/**********************************************
+  Warranty types
+**********************************************/
+
 export type WarrantyData = {
   title: TitleData;
   texts: string[];
   image: ImageData;
 };
+
+/**********************************************
+  Care types
+**********************************************/
 
 export type CareData = {
   title: TitleData;
@@ -49,11 +67,19 @@ export type CareData = {
   image: ImageData;
 };
 
+/**********************************************
+  Cashback types
+**********************************************/
+
 export type CashbackData = {
   title: TitleData;
   texts: string[];
   buttonText: string;
 };
+
+/**********************************************
+  Clients types
+**********************************************/
 
 export type BrandFromAPI = {
   name: string;
@@ -65,7 +91,11 @@ export type ClientsDataFromAPI  = {
   brands: BrandFromAPI[];
 };
 
-type LinkContent = {
+/**********************************************
+  Footer types
+**********************************************/
+
+export type LinkContent = {
   type: string;
   data: string;
 };
@@ -80,7 +110,7 @@ export type CategoriesData = {
   links: FooterLinkData[];
 };
 
-type DevContent = {
+export type DevContent = {
   type: string;
   data: string;
   description: string;
@@ -97,7 +127,10 @@ export type FooterData = {
   developer: DeveloperData;
 };
 
-// AppData
+/**********************************************
+  AppData
+**********************************************/
+
 export type AppData = {
   primaryInfo: HeaderData;
   download: DownloadData;
@@ -107,3 +140,5 @@ export type AppData = {
   clients: ClientsDataFromAPI
   secondaryInfo: FooterData
 };
+
+/*********************************************/
