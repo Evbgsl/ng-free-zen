@@ -125,14 +125,13 @@ export const handleCloseClick = () => {
 
 export const handleLangChange = (event) => {
   console.log('test');
-  const $selectLang = /** @type { HTMLSelectElement  | null } */ (event.target)
+  const $langSelector = /** @type { HTMLSelectElement  | null } */ (event.target)
   /** @type { HTMLElement | null } */
   const $root = document.querySelector('#root');
 
-  if (!$selectLang || !$root) return;
-  $root.innerHTML = '';
+  if (!$langSelector || !$root) return;
 
-  const selectedLang = $selectLang.value;
+  const selectedLang = $langSelector.value;
 
   if (selectedLang === 'ru') {
     $root.innerHTML = App(dataRuFromApi);

@@ -17,7 +17,7 @@ export const AddHadlers = () => {
   const $navLinks = document.querySelector('#nav');
   const $orderBtn = document.querySelector('#order-open');
   const $closeBtn = document.querySelector('#close');
-  const $langSel = document.querySelector('#lang');
+  const $langSelector = document.querySelector('#lang');
 
   $logoBtn?.addEventListener('click', handleLogoClick);
   $themeBtn?.addEventListener('click', (event) =>
@@ -26,5 +26,5 @@ export const AddHadlers = () => {
   $navLinks?.addEventListener('click', handleNavLinkClick);
   $orderBtn?.addEventListener('click', handleOrderClick);
   $closeBtn?.addEventListener('click', handleCloseClick);
-  $langSel?.addEventListener('change', handleLangChange);
+  $langSelector?.addEventListener('change', handleLangChange);
 };
