@@ -1,5 +1,12 @@
+import { dataEnFromAPI } from './api/index.js';
+import { dataRuFromAPI } from './api/index.js';
+
+import { App } from './App.js';
+import { AddHadlers } from './addHandlers.js';
+
 import { IconMoon } from './ui/IconMoon/index.js';
 import { IconSun } from './ui/IconSun/index.js';
+
 import { toggleBurgerAndNav } from './utils/index.js';
 
 /**
@@ -15,7 +22,7 @@ export const handleLogoClick = () => {
 };
 
 /**
- * @typedef {import ('./widgets/Clients/types').BrandFromAPI} BrandFromAPI
+ * @typedef {import ('./types').BrandFromAPI} BrandFromAPI
  */
 
 /**
@@ -110,3 +117,23 @@ export const handleCloseClick = () => {
   $modal.classList.remove('is-visible');
 };
 
+/**
+ * @function onLangChange
+ * @description Change language
+ * @param { Event } event
+ */
+
+export const handleLangChange = (event) => {
+  console.log('test');
+  const $langSelector = /** @type { HTMLSelectElement  | null } */ (event.target)
+  /** @type { HTMLElement | null } */
+  const $root = document.querySelector('#root');
+
+  if (!$langSelector || !$root) return;
+
+  const selectedLang = $langSelector.value;
+  const data = selectedLang === 'ru' ? dataRuFromAPI : dataEnFromAPI;
+  $root.innerHTML = App(data);
+
+  AddHadlers();
+};

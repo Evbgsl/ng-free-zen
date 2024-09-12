@@ -1,4 +1,4 @@
-export const dataFromAPI = {
+export const dataRuFromAPI = {
   primaryInfo: {
     langs: [
       {
@@ -13,33 +13,33 @@ export const dataFromAPI = {
     navigation: [
       {
         key: 'download',
-        name: 'Download',
+        name: 'Скачать',
       },
       {
         key: 'warranty',
-        name: 'Warranty',
+        name: 'Гарантия',
       },
       {
         key: 'care',
-        name: 'Care',
+        name: 'Уход',
       },
       {
         key: 'cashback',
-        name: 'Cashback',
+        name: 'Кэшбэк',
       },
       {
         key: 'clients',
-        name: 'Clients',
+        name: 'Клиенты',
       },
     ],
   },
   download: {
     title: {
-      content: 'Peaceful shopping mindful money',
+      content: 'Спокойные покупки, обдуманные финансы',
       priority: 2,
     },
     texts: [
-      'See how we can help with making your shopping experience and money management more ZEN.',
+      'Посмотрите, как мы можем помочь сделать ваш шопинг и управление деньгами более ZEN.',
     ],
     links: [
       {
@@ -53,48 +53,49 @@ export const dataFromAPI = {
     ],
     image: {
       source: './assets/images/1.jpg',
-      description: 'Bag and device',
+      description: 'Сумка и устройство',
     },
   },
   warranty: {
     title: {
-      content: '1-year warranty boost',
+      content: '1 год дополнительной гарантии',
       priority: 2,
     },
     texts: [
-      'ZEN cards have a very neat feature that will help you whenever your electronic devices start failing after the standard warranty ends, which is pretty common.',
-      'When you buy any electronics with your ZEN shopping Mastercard, their warranty gets extended by one year. How does it work? It simply does. Automatically'],
+      'Карты ZEN имеют приятную особенность, которая поможет вам, когда ваши электронные устройства начинают выходить из строя после окончания стандартной гарантии, что довольно часто.',
+      'Когда вы покупаете электронику с картой ZEN Mastercard, гарантия автоматически продлевается на год.',
+    ],
     image: {
       source: './assets/images/2.jpg',
-      description: 'Basket',
+      description: 'Корзина',
     },
   },
   care: {
     title: {
-      content: 'ZEN Care',
+      content: 'ZEN Уход',
       priority: 2,
     },
     texts: [
-      'Shopping online is usually a delightful experience. Until it is not.',
-      'Until something you buy, proves to be faulty, missing or a totally wrong item, you’re in for long product return procedures.',
-      'But, here comes ZEN Care: a free, built-in shopping protection.',
+      'Онлайн-шопинг обычно приносит удовольствие. Пока что-то не пойдет не так.',
+      'Когда товар оказывается бракованным, отсутствует или совсем не тот, начинается длинная процедура возврата.',
+      'Но здесь приходит ZEN Уход: бесплатная встроенная защита покупок.',
     ],
     image: {
       source: './assets/images/3.jpg',
-      description: 'Card',
+      description: 'Карта',
     },
   },
   cashback: {
     title: {
-      content: 'and cashback!',
+      content: 'и кэшбэк!',
       priority: 2,
     },
     texts: [
-      'It saves a little bit of money while you’re shopping, but in many cases it takes ages to get anything out of it.',
-      'We gave it a thought and made cashback way more friendly.',
-      'Up to 14% of what you spend using ZEN Mastercard ® will materialize on your account right after the purchase.',
+      'Это экономит немного денег при покупках, но часто на получение чего-либо уходит много времени.',
+      'Мы подумали об этом и сделали кэшбэк более удобным.',
+      'До 14% от суммы, потраченной с помощью ZEN Mastercard ®, поступит на ваш счет сразу после покупки.',
     ],
-    buttonText: 'Order a consultation',
+    buttonText: 'Заказать консультацию',
   },
   clients: {
     brands: [
@@ -143,53 +144,53 @@ export const dataFromAPI = {
   secondaryInfo: {
     categories: [
       {
-        name: 'Learn',
+        name: 'Изучить',
         links: [
           {
             url: 'https://example.com',
             content: {
               type: 'text',
-              data: 'Help center',
+              data: 'Центр помощи',
             }
           },
           {
             url: 'https://example.com',
             content: {
               type: 'text',
-              data: 'Join ZEN team',
+              data: 'Присоединиться к команде ZEN',
             }
           },
           {
             url: 'https://example.com',
             content: {
               type: 'text',
-              data: 'Privacy Policy',
+              data: 'Политика конфиденциальности',
             }
           },
           {
             url: 'https://example.com',
             content: {
               type: 'text',
-              data: 'Cookies',
+              data: 'Куки',
             }
           },
           {
             url: 'https://example.com',
             content: {
               type: 'text',
-              data: 'Terms of use',
+              data: 'Условия использования',
             }
           },
         ],
       },
       {
-        name: 'Discover',
+        name: 'Открыть',
         links: [
           {
             url: 'https://example.com',
             content: {
               type: 'text',
-              data: 'For developers',
+              data: 'Для разработчиков',
             }
           },
           {
@@ -209,45 +210,45 @@ export const dataFromAPI = {
         ],
       },
       {
-        name: 'Offer',
+        name: 'Предложение',
         links: [
           {
             url: 'https://example.com',
             content: {
               type: 'text',
-              data: 'Business',
+              data: 'Бизнес',
             }
           },
           {
             url: 'https://example.com',
             content: {
               type: 'text',
-              data: 'Personal',
+              data: 'Личное',
             }
           },
         ],
       },
       {
-        name: 'Language',
+        name: 'Язык',
         links: [
           {
             url: 'https://example.com',
             content: {
               type: 'text',
-              data: 'English',
+              data: 'Английский',
             }
           },
           {
             url: 'https://example.com',
             content: {
               type: 'text',
-              data: 'Polish',
+              data: 'Польский',
             }
           },
         ],
       },
       {
-        name: 'Follow us',
+        name: 'Следите за нами',
         links: [
           {
             url: 'https://example.com',
@@ -260,7 +261,7 @@ export const dataFromAPI = {
         ],
       },
       {
-        name: 'Contact',
+        name: 'Контакты',
         links: [
           {
             url: 'hello@zen.com',
@@ -273,12 +274,12 @@ export const dataFromAPI = {
       },
     ],
     texts: [
-      'ZEN is a licensed financial institution under the supervision of the Central Bank of Lithuania approved by European Banking Authority for 31 countries.',
-      'Registration number of the company 304749651, VAT ID LT100011714916.',
-      'License of electronic money institutions number LB000457.',
-      'Share capital 2.185.000,00 EUR.',
-      'Company address: Mėsinių g. 5, LT-01133, Vilnius, Lithuania.',
-      'Sales Office: ul. Emilii Plater 53, 00-113 Warsaw, Poland.',
+      'ZEN — лицензированное финансовое учреждение под надзором Центрального банка Литвы, утвержденное Европейским банковским управлением для 31 страны.',
+      'Регистрационный номер компании 304749651, ИНН LT100011714916.',
+      'Лицензия на электронные деньги № LB000457.',
+      'Уставный капитал 2.185.000,00 EUR.',
+      'Адрес компании: Mėsinių g. 5, LT-01133, Вильнюс, Литва.',
+      'Офис продаж: ул. Эмилии Платер 53, 00-113 Варшава, Польша.',
     ],
     developer: {
       url: 'https://example.com',

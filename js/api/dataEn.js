@@ -1,0 +1,292 @@
+export const dataEnFromAPI = {
+  primaryInfo: {
+    langs: [
+      {
+        key: 'en',
+        name: 'EN',
+      },
+      {
+        key: 'ru',
+        name: 'RU',
+      },
+    ],
+    navigation: [
+      {
+        key: 'download',
+        name: 'Download',
+      },
+      {
+        key: 'warranty',
+        name: 'Warranty',
+      },
+      {
+        key: 'care',
+        name: 'Care',
+      },
+      {
+        key: 'cashback',
+        name: 'Cashback',
+      },
+      {
+        key: 'clients',
+        name: 'Clients',
+      },
+    ],
+  },
+  download: {
+    title: {
+      content: 'Peaceful shopping mindful money',
+      priority: 2,
+    },
+    texts: [
+      'See how we can help with making your shopping experience and money management more ZEN.',
+    ],
+    links: [
+      {
+        url: 'https://apple.com',
+        name: 'apple',
+      },
+      {
+        url: 'https://google.com',
+        name: 'google',
+      },
+    ],
+    image: {
+      source: './assets/images/1.jpg',
+      description: 'Bag and device',
+    },
+  },
+  warranty: {
+    title: {
+      content: '1-year warranty boost',
+      priority: 2,
+    },
+    texts: [
+      'ZEN cards have a very neat feature that will help you whenever your electronic devices start failing after the standard warranty ends, which is pretty common.',
+      'When you buy any electronics with your ZEN shopping Mastercard, their warranty gets extended by one year. How does it work? It simply does. Automatically'],
+    image: {
+      source: './assets/images/2.jpg',
+      description: 'Basket',
+    },
+  },
+  care: {
+    title: {
+      content: 'ZEN Care',
+      priority: 2,
+    },
+    texts: [
+      'Shopping online is usually a delightful experience. Until it is not.',
+      'Until something you buy, proves to be faulty, missing or a totally wrong item, you’re in for long product return procedures.',
+      'But, here comes ZEN Care: a free, built-in shopping protection.',
+    ],
+    image: {
+      source: './assets/images/3.jpg',
+      description: 'Card',
+    },
+  },
+  cashback: {
+    title: {
+      content: 'and cashback!',
+      priority: 2,
+    },
+    texts: [
+      'It saves a little bit of money while you’re shopping, but in many cases it takes ages to get anything out of it.',
+      'We gave it a thought and made cashback way more friendly.',
+      'Up to 14% of what you spend using ZEN Mastercard ® will materialize on your account right after the purchase.',
+    ],
+    buttonText: 'Order a consultation',
+  },
+  clients: {
+    brands: [
+      {
+        name: 'Rosegal',
+        lightSource: './assets/brands/1/light.svg',
+        darkSource: './assets/brands/1/dark.svg',
+      },
+      {
+        name: 'Gearbest',
+        lightSource: './assets/brands/2/light.svg',
+        darkSource: './assets/brands/2/dark.svg',
+      },
+      {
+        name: 'Allegro',
+        lightSource: './assets/brands/3/light.svg',
+        darkSource: './assets/brands/3/dark.svg',
+      },
+      {
+        name: 'Aliexpress',
+        lightSource: './assets/brands/4/light.svg',
+        darkSource: './assets/brands/4/dark.svg',
+      },
+      {
+        name: 'Booking.com',
+        lightSource: './assets/brands/5/light.svg',
+        darkSource: './assets/brands/5/dark.svg',
+      },
+      {
+        name: 'MediaMarkt',
+        lightSource: './assets/brands/6/light.svg',
+        darkSource: './assets/brands/6/dark.svg',
+      },
+      {
+        name: 'RTVeuroAGD',
+        lightSource: './assets/brands/7/light.svg',
+        darkSource: './assets/brands/7/dark.svg',
+      },
+      {
+        name: 'Groupon',
+        lightSource: './assets/brands/8/light.svg',
+        darkSource: './assets/brands/8/dark.svg',
+      },
+    ]
+  },
+  secondaryInfo: {
+    categories: [
+      {
+        name: 'Learn',
+        links: [
+          {
+            url: 'https://example.com',
+            content: {
+              type: 'text',
+              data: 'Help center',
+            }
+          },
+          {
+            url: 'https://example.com',
+            content: {
+              type: 'text',
+              data: 'Join ZEN team',
+            }
+          },
+          {
+            url: 'https://example.com',
+            content: {
+              type: 'text',
+              data: 'Privacy Policy',
+            }
+          },
+          {
+            url: 'https://example.com',
+            content: {
+              type: 'text',
+              data: 'Cookies',
+            }
+          },
+          {
+            url: 'https://example.com',
+            content: {
+              type: 'text',
+              data: 'Terms of use',
+            }
+          },
+        ],
+      },
+      {
+        name: 'Discover',
+        links: [
+          {
+            url: 'https://example.com',
+            content: {
+              type: 'text',
+              data: 'For developers',
+            }
+          },
+          {
+            url: 'https://example.com',
+            content: {
+              type: 'text',
+              data: 'Apple Pay',
+            }
+          },
+          {
+            url: 'https://example.com',
+            content: {
+              type: 'text',
+              data: 'Google Pay',
+            }
+          },
+        ],
+      },
+      {
+        name: 'Offer',
+        links: [
+          {
+            url: 'https://example.com',
+            content: {
+              type: 'text',
+              data: 'Business',
+            }
+          },
+          {
+            url: 'https://example.com',
+            content: {
+              type: 'text',
+              data: 'Personal',
+            }
+          },
+        ],
+      },
+      {
+        name: 'Language',
+        links: [
+          {
+            url: 'https://example.com',
+            content: {
+              type: 'text',
+              data: 'English',
+            }
+          },
+          {
+            url: 'https://example.com',
+            content: {
+              type: 'text',
+              data: 'Polish',
+            }
+          },
+        ],
+      },
+      {
+        name: 'Follow us',
+        links: [
+          {
+            url: 'https://example.com',
+            content: {
+              type: 'image',
+              data: './assets/icons/in.svg',
+              description: 'Linkedin',
+            }
+          },
+        ],
+      },
+      {
+        name: 'Contact',
+        links: [
+          {
+            url: 'hello@zen.com',
+            content: {
+              type: 'text',
+              data: 'hello@zen.com',
+            }
+          }
+        ],
+      },
+    ],
+    texts: [
+      'ZEN is a licensed financial institution under the supervision of the Central Bank of Lithuania approved by European Banking Authority for 31 countries.',
+      'Registration number of the company 304749651, VAT ID LT100011714916.',
+      'License of electronic money institutions number LB000457.',
+      'Share capital 2.185.000,00 EUR.',
+      'Company address: Mėsinių g. 5, LT-01133, Vilnius, Lithuania.',
+      'Sales Office: ul. Emilii Plater 53, 00-113 Warsaw, Poland.',
+    ],
+    developer: {
+      url: 'https://example.com',
+      content: {
+        type: 'image',
+        data: './assets/icons/developer.svg',
+        description: 'PCI',
+      }
+    },
+  },
+};
