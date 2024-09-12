@@ -22,7 +22,6 @@ export const App = (data) => {
     ${Header(data.primaryInfo)}
     ${Download(data.download)}
     ${Warranty(data.warranty)}
-    ${Download(data.download)}
     ${Care(data.care)}
     ${Cashback(data.cashback)}
     ${Clients(data.clients)}
