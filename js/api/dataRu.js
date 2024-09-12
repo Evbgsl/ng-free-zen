@@ -1,4 +1,4 @@
-export const ruDataFromApi = {
+export const dataRuFromApi = {
   primaryInfo: {
     langs: [
       {
