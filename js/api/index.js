@@ -1,2 +1,2 @@
-export { enDataFromApi } from './EnData.js';
-export { ruDataFromApi } from './RuData.js';
+export { enDataFromApi } from './dataEn.js';
+export { ruDataFromApi } from './dataRu.js';
