@@ -1,6 +1,2 @@
-import { FooterLinkData } from '../LinkFooter/types';
+import { CategoriesData } from '../../types';
 
-export type CategoriesData = {
-  name: string;
-  links: FooterLinkData[];
-};

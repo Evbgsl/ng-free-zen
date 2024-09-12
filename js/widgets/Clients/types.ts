@@ -1,9 +1,1 @@
-export type BrandFromAPI = {
-  name: string;
-  lightSource: string;
-  darkSource: string;
-};
-
-export type ClientsDataFromAPI  = {
-  brands: BrandFromAPI[];
-};
+export type { ClientsDataFromAPI } from '../../types';

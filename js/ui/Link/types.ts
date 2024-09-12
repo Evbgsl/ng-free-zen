@@ -1,4 +1,1 @@
-export type LinkData = {
-  name: string;
-  url: string;
-};
+export type { LinkData } from '../../types';
