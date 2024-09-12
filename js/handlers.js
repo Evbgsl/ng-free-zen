@@ -1,5 +1,5 @@
-import { dataEnFromApi } from './api/index.js';
-import { dataRuFromApi } from './api/index.js';
+import { dataEnFromAPI } from './api/index.js';
+import { dataRuFromAPI } from './api/index.js';
 
 import { App } from './App.js';
 import { AddHadlers } from './addHandlers.js';
@@ -132,7 +132,7 @@ export const handleLangChange = (event) => {
   if (!$langSelector || !$root) return;
 
   const selectedLang = $langSelector.value;
-  const data = selectedLang === 'ru' ? dataRuFromApi : dataEnFromApi;
+  const data = selectedLang === 'ru' ? dataRuFromAPI : dataEnFromAPI;
   $root.innerHTML = App(data);
 
   AddHadlers();

@@ -1,4 +1,4 @@
-import { dataEnFromApi } from './api/index.js';
+import { dataEnFromAPI } from './api/index.js';
 
 import {
   handleLogoClick,
@@ -21,7 +21,7 @@ export const AddHadlers = () => {
 
   $logoBtn?.addEventListener('click', handleLogoClick);
   $themeBtn?.addEventListener('click', (event) =>
-    onThemeClick(event, dataEnFromApi.clients.brands));
+    onThemeClick(event, dataEnFromAPI.clients.brands));
   $burgerBtn?.addEventListener('click', handleBurgerClick);
   $navLinks?.addEventListener('click', handleNavLinkClick);
   $orderBtn?.addEventListener('click', handleOrderClick);
