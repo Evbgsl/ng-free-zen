@@ -1,5 +1,5 @@
 import { App } from './App.js';
-import { AddHadlers } from './addHandlers.js';
+import { addHandlers } from './addHandlers.js';
 
 import { IconMoon } from './ui/IconMoon/index.js';
 import { IconSun } from './ui/IconSun/index.js';
@@ -136,7 +136,7 @@ export const handleLangChange = (event) => {
   })
   .then((responseData) => {
     $root.innerHTML = App(responseData);
-    AddHadlers(responseData);
+    addHandlers(responseData);
   })
   .catch((error) => {
     console.error('Ошибка запроса:', error);

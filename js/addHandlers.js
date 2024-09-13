@@ -17,7 +17,7 @@ import {
  * @param { AppData } data
  */
 
-export const AddHadlers = (data) => {
+export const addHandlers = (data) => {
   const $logoBtn = document.querySelector('#logo');
   const $themeBtn = document.querySelector('#theme');
   const $burgerBtn = document.querySelector('#burger');
