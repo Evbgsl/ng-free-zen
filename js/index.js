@@ -5,9 +5,6 @@ const $root = document.querySelector('#root');
 
 fetch('https://ng-free-zen-evbgsl-default-rtdb.firebaseio.com/languages/en.json')
 .then((response) => {
-  if (!response.ok) {
-    throw new Error('Ошибка сети');
-  }
   return response.json();
 })
 .then((responseData) => {

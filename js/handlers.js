@@ -132,9 +132,6 @@ export const handleLangChange = (event) => {
 
   fetch(requestUrl)
   .then((response) => {
-    if (!response.ok) {
-      throw new Error('Ошибка сети');
-    }
     return response.json();
   })
   .then((responseData) => {
