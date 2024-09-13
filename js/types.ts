@@ -137,8 +137,8 @@ export type AppData = {
   warranty: WarrantyData;
   care: CareData;
   cashback: CashbackData;
-  clients: ClientsDataFromAPI
-  secondaryInfo: FooterData
+  clients: ClientsDataFromAPI;
+  secondaryInfo: FooterData;
 };
 
 /*********************************************/
