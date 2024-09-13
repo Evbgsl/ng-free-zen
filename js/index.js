@@ -6,6 +6,7 @@ const $root = document.querySelector('#root');
 fetch('https://ng-free-zen-evbgsl-default-rtdb.firebaseio.com/languages/en.json')
   .then((response) => response.json())
   .then((responseData) => {
+    if(!$root) return;
     $root.innerHTML = App(responseData);
     addHandlers(responseData);
   })

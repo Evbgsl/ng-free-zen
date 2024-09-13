@@ -128,7 +128,7 @@ export const handleLangChange = (event) => {
   if (!$langSelector || !$root) return;
 
   const selectedLang = $langSelector.value;
-  const requestUrl = `https://ng-free-zen-evbgsl-default-rtdb.firebaseio.com/languages/${selectedLang}.json`;
+  const requestURL = `https://ng-free-zen-evbgsl-default-rtdb.firebaseio.com/languages/${selectedLang}.json`;
 
   fetch(requestURL)
     .then((response) => response.json())
