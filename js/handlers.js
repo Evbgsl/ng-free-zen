@@ -130,15 +130,13 @@ export const handleLangChange = (event) => {
   const selectedLang = $langSelector.value;
   const requestUrl = `https://ng-free-zen-evbgsl-default-rtdb.firebaseio.com/languages/${selectedLang}.json`;
 
-  fetch(requestUrl)
-  .then((response) => {
-    return response.json();
-  })
-  .then((responseData) => {
-    $root.innerHTML = App(responseData);
-    addHandlers(responseData);
-  })
-  .catch((error) => {
-    console.error('Ошибка запроса:', error);
-  });
+  fetch(requestURL)
+    .then((response) => response.json())
+    .then((responseData) => {
+      $root.innerHTML = App(responseData);
+      addHandlers(responseData);
+    })
+    .catch((error) => {
+      console.error('Ошибка запроса:', error);
+    });
 };
