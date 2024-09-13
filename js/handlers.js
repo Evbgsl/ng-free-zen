@@ -15,10 +15,18 @@ import { toggleBurgerAndNav } from './utils/index.js';
  */
 
 export const handleLogoClick = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth',
-  });
+  // window.scrollTo({
+  //   top: 0,
+  //   behavior: 'smooth',
+  // });
+  fetch('https://ng-free-zen-evbgsl-default-rtdb.firebaseio.com/.json')
+    .then((response) => {
+      console.log('succes');
+      return response.json();
+    })
+    .then((responseData) => {
+      console.log(responseData);
+    });
 };
 
 /**
