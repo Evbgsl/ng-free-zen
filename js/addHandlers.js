@@ -14,7 +14,7 @@ import {
 
 /**
  * @function addHandlers
- * @param { AppData } data
+ * @param {AppData} data
  */
 
 export const addHandlers = (data) => {

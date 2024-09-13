@@ -117,7 +117,7 @@ export const handleCloseClick = () => {
 /**
  * @function onLangChange
  * @description Change language
- * @param { Event } event
+ * @param {Event} event
  */
 
 export const handleLangChange = (event) => {
