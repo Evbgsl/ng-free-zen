@@ -121,7 +121,6 @@ export const handleCloseClick = () => {
  */
 
 export const handleLangChange = (event) => {
-  console.log('test');
   const $langSelector = /** @type { HTMLSelectElement  | null } */ (event.target)
   /** @type { HTMLElement | null } */
   const $root = document.querySelector('#root');
