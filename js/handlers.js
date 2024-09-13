@@ -19,17 +19,17 @@ export const handleLogoClick = () => {
 };
 
 /**
- * @typedef {import ('./types').BrandFromAPI} BrandFromAPI
+ * @typedef {import ('./types').Brand} Brand
  */
 
 /**
  * @function onThemeClick
  * @description In anonymous handler. Changing elements colors.
  * @param {Event} event
- * @param {BrandFromAPI[]} brandsFromAPI
+ * @param {Brand[]} brands
  */
 
-export const onThemeClick = (event, brandsFromAPI) => {
+export const onThemeClick = (event, brands) => {
   /** @type { HTMLElement | null } */
   const $root = document.querySelector('#root');
 
@@ -53,8 +53,8 @@ export const onThemeClick = (event, brandsFromAPI) => {
 
   $brandNodes.forEach(($element, index) => {
     $element.src = newTheme === 'light'
-      ? brandsFromAPI[index].lightSource
-      : brandsFromAPI[index].darkSource;
+      ? brands[index].lightSource
+      : brands[index].darkSource;
   });
 };
 

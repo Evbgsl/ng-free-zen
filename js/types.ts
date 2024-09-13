@@ -81,14 +81,14 @@ export type CashbackData = {
   Clients types
 **********************************************/
 
-export type BrandFromAPI = {
+export type Brand = {
   name: string;
   lightSource: string;
   darkSource: string;
 };
 
-export type ClientsDataFromAPI  = {
-  brands: BrandFromAPI[];
+export type ClientsData  = {
+  brands: Brand[];
 };
 
 /**********************************************
@@ -137,7 +137,7 @@ export type AppData = {
   warranty: WarrantyData;
   care: CareData;
   cashback: CashbackData;
-  clients: ClientsDataFromAPI;
+  clients: ClientsData;
   secondaryInfo: FooterData;
 };
 
