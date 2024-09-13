@@ -1,6 +1,3 @@
-import { dataEnFromAPI } from './api/index.js';
-import { dataRuFromAPI } from './api/index.js';
-
 import { App } from './App.js';
 import { AddHadlers } from './addHandlers.js';
 
@@ -15,18 +12,10 @@ import { toggleBurgerAndNav } from './utils/index.js';
  */
 
 export const handleLogoClick = () => {
-  // window.scrollTo({
-  //   top: 0,
-  //   behavior: 'smooth',
-  // });
-  fetch('https://ng-free-zen-evbgsl-default-rtdb.firebaseio.com/.json')
-    .then((response) => {
-      console.log('succes');
-      return response.json();
-    })
-    .then((responseData) => {
-      console.log(responseData);
-    });
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
 };
 
 /**
@@ -140,8 +129,20 @@ export const handleLangChange = (event) => {
   if (!$langSelector || !$root) return;
 
   const selectedLang = $langSelector.value;
-  const data = selectedLang === 'ru' ? dataRuFromAPI : dataEnFromAPI;
-  $root.innerHTML = App(data);
+  const requestUrl  = `https://ng-free-zen-evbgsl-default-rtdb.firebaseio.com/languages/${selectedLang}.json`;
 
-  AddHadlers();
+  fetch(requestUrl)
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error('Ошибка сети');
+    }
+    return response.json();
+  })
+  .then((responseData) => {
+    $root.innerHTML = App(responseData);
+    AddHadlers(responseData);
+  })
+  .catch((error) => {
+    console.error('Ошибка запроса:', error);
+  });
 };

@@ -1,16 +1,19 @@
-import { dataEnFromAPI } from './api/index.js';
 import { App } from './App.js';
 import { AddHadlers } from './addHandlers.js';
 
 const $root = document.querySelector('#root');
 
-/*
-  Выполняем запрос к серверу
-  Обрабатываем ответ
-  Если ожидаемый ответ получен, то с помощью компонента App (передав ему данные)
-  собираем и отрисовываем интерфейс
-  Регистрируем обработчики событий
-*/
-
-$root?.insertAdjacentHTML('beforeend', App(dataEnFromAPI));
-AddHadlers();
+fetch('https://ng-free-zen-evbgsl-default-rtdb.firebaseio.com/languages/en.json')
+.then((response) => {
+  if (!response.ok) {
+    throw new Error('Ошибка сети');
+  }
+  return response.json();
+})
+.then((responseData) => {
+  $root?.insertAdjacentHTML('beforeend', App(responseData));
+  AddHadlers(responseData);
+})
+.catch((error) => {
+  console.error('Ошибка запроса:', error);
+});
