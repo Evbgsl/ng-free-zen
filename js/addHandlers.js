@@ -13,7 +13,7 @@ import {
  */
 
 /**
- * @function AddHadlers
+ * @function addHandlers
  * @param { AppData } data
  */
 
