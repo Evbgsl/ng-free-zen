@@ -1,1 +1,1 @@
-export type { ClientsDataFromAPI } from '../../types';
+export type { ClientsData } from '../../types';

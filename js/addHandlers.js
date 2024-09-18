@@ -1,5 +1,3 @@
-import { dataEnFromAPI } from './api/index.js';
-
 import {
   handleLogoClick,
   onThemeClick,
@@ -10,7 +8,16 @@ import {
   handleLangChange,
 } from './handlers.js';
 
-export const AddHadlers = () => {
+/**
+ * @typedef {import ('./types').AppData} AppData
+ */
+
+/**
+ * @function addHandlers
+ * @param {AppData} data
+ */
+
+export const addHandlers = (data) => {
   const $logoBtn = document.querySelector('#logo');
   const $themeBtn = document.querySelector('#theme');
   const $burgerBtn = document.querySelector('#burger');
@@ -21,7 +28,7 @@ export const AddHadlers = () => {
 
   $logoBtn?.addEventListener('click', handleLogoClick);
   $themeBtn?.addEventListener('click', (event) =>
-    onThemeClick(event, dataEnFromAPI.clients.brands));
+    onThemeClick(event, data.clients.brands));
   $burgerBtn?.addEventListener('click', handleBurgerClick);
   $navLinks?.addEventListener('click', handleNavLinkClick);
   $orderBtn?.addEventListener('click', handleOrderClick);

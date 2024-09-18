@@ -1,10 +1,10 @@
 /**
- * @typedef {import ('./types').ClientsDataFromAPI} ClientsDataFromAPI
+ * @typedef {import ('./types').ClientsData} ClientsData
  */
 
 /**
  * @function Clients
- * @param {ClientsDataFromAPI} clientsData
+ * @param {ClientsData} clientsData
  * @returns {string} HTML
  */
 

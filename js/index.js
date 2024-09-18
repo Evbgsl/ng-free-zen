@@ -1,8 +1,15 @@
-import { dataEnFromAPI } from './api/index.js';
 import { App } from './App.js';
-import { AddHadlers } from './addHandlers.js';
+import { addHandlers } from './addHandlers.js';
 
 const $root = document.querySelector('#root');
 
-$root?.insertAdjacentHTML('beforeend', App(dataEnFromAPI));
-AddHadlers();
+fetch('https://ng-free-zen-evbgsl-default-rtdb.firebaseio.com/languages/en.json')
+  .then((response) => response.json())
+  .then((responseData) => {
+    if(!$root) return;
+    $root.innerHTML = App(responseData);
+    addHandlers(responseData);
+  })
+  .catch((error) => {
+    console.error('Ошибка запроса:', error);
+  });

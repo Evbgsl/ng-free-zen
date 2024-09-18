@@ -1,8 +1,5 @@
-import { dataEnFromAPI } from './api/index.js';
-import { dataRuFromAPI } from './api/index.js';
-
 import { App } from './App.js';
-import { AddHadlers } from './addHandlers.js';
+import { addHandlers } from './addHandlers.js';
 
 import { IconMoon } from './ui/IconMoon/index.js';
 import { IconSun } from './ui/IconSun/index.js';
@@ -22,17 +19,17 @@ export const handleLogoClick = () => {
 };
 
 /**
- * @typedef {import ('./types').BrandFromAPI} BrandFromAPI
+ * @typedef {import ('./types').Brand} Brand
  */
 
 /**
  * @function onThemeClick
  * @description In anonymous handler. Changing elements colors.
  * @param {Event} event
- * @param {BrandFromAPI[]} brandsFromAPI
+ * @param {Brand[]} brands
  */
 
-export const onThemeClick = (event, brandsFromAPI) => {
+export const onThemeClick = (event, brands) => {
   /** @type { HTMLElement | null } */
   const $root = document.querySelector('#root');
 
@@ -56,8 +53,8 @@ export const onThemeClick = (event, brandsFromAPI) => {
 
   $brandNodes.forEach(($element, index) => {
     $element.src = newTheme === 'light'
-      ? brandsFromAPI[index].lightSource
-      : brandsFromAPI[index].darkSource;
+      ? brands[index].lightSource
+      : brands[index].darkSource;
   });
 };
 
@@ -120,11 +117,10 @@ export const handleCloseClick = () => {
 /**
  * @function onLangChange
  * @description Change language
- * @param { Event } event
+ * @param {Event} event
  */
 
 export const handleLangChange = (event) => {
-  console.log('test');
   const $langSelector = /** @type { HTMLSelectElement  | null } */ (event.target)
   /** @type { HTMLElement | null } */
   const $root = document.querySelector('#root');
@@ -132,8 +128,15 @@ export const handleLangChange = (event) => {
   if (!$langSelector || !$root) return;
 
   const selectedLang = $langSelector.value;
-  const data = selectedLang === 'ru' ? dataRuFromAPI : dataEnFromAPI;
-  $root.innerHTML = App(data);
+  const requestURL = `https://ng-free-zen-evbgsl-default-rtdb.firebaseio.com/languages/${selectedLang}.json`;
 
-  AddHadlers();
+  fetch(requestURL)
+    .then((response) => response.json())
+    .then((responseData) => {
+      $root.innerHTML = App(responseData);
+      addHandlers(responseData);
+    })
+    .catch((error) => {
+      console.error('Ошибка запроса:', error);
+    });
 };
