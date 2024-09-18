@@ -1,5 +1,6 @@
 import { App } from './App.js';
 import { addHandlers } from './addHandlers.js';
+import { API_BASE_URL } from './config.js';
 
 import { IconMoon } from './ui/IconMoon/index.js';
 import { IconSun } from './ui/IconSun/index.js';
@@ -40,13 +41,13 @@ export const onThemeClick = (event, brands) => {
 
   if (!$root || !$themeBtn || !$brandNodes) return;
 
-  const currentTheme = $themeBtn.dataset.theme;
+  const currentTheme = localStorage.getItem('theme') || 'light';
   const newTheme = currentTheme === 'light'
     ? 'dark'
     : 'light';
 
-  $root.dataset.theme = newTheme;
-  $themeBtn.dataset.theme = newTheme;
+  localStorage.setItem('theme', newTheme);
+  $root.classList.replace(currentTheme, newTheme);
   $themeBtn.innerHTML = newTheme === 'light'
     ? IconMoon()
     : IconSun();
@@ -121,22 +122,23 @@ export const handleCloseClick = () => {
  */
 
 export const handleLangChange = (event) => {
-  const $langSelector = /** @type { HTMLSelectElement  | null } */ (event.target)
-  /** @type { HTMLElement | null } */
-  const $root = document.querySelector('#root');
 
-  if (!$langSelector || !$root) return;
+  ( async () => {
+    const $langSelector = /** @type { HTMLSelectElement  | null } */ (event.target)
+    /** @type { HTMLElement | null } */
+    const $root = document.querySelector('#root');
 
-  const selectedLang = $langSelector.value;
-  const requestURL = `https://ng-free-zen-evbgsl-default-rtdb.firebaseio.com/languages/${selectedLang}.json`;
+    if (!$langSelector || !$root) return;
 
-  fetch(requestURL)
-    .then((response) => response.json())
-    .then((responseData) => {
-      $root.innerHTML = App(responseData);
-      addHandlers(responseData);
-    })
-    .catch((error) => {
-      console.error('Ошибка запроса:', error);
-    });
+    const selectedLang = $langSelector.value;
+    localStorage.setItem('lang', selectedLang);
+
+    console.log(`${API_BASE_URL}/${selectedLang}.json`);
+
+    const response = await fetch(`${API_BASE_URL}/${selectedLang}.json`);
+    const responseData = await response.json();
+
+    if($root) $root.innerHTML = App(responseData);
+    addHandlers(responseData)
+  })()
 };

@@ -10,7 +10,6 @@ export const Theme = (className) => `
   <button class="${className}"
     type="button"
     id="theme"
-    data-theme="light"
   >
     ${IconMoon()}
   </button>

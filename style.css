@@ -45,7 +45,7 @@ input {
   border: 0;
 }
 
-.root[data-theme=light] {
+.root.light {
   --color-primary: #000;
   --text-footer-color: #fff;
   --border-color-primary: #aaa;
@@ -56,7 +56,7 @@ input {
   --icon-color: black;
 }
 
-.root[data-theme=dark] {
+.root.dark {
   --color-primary: #fff;
   --text-footer-color: #fff;
   --border-color-primary: #fff;

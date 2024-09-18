@@ -2,20 +2,23 @@ import { App } from './App.js';
 import { addHandlers } from './addHandlers.js';
 import { API_BASE_URL } from './config.js';
 
-(async () => {
-  const $root = document.querySelector('#root');
+/**
+ * @function updateContent
+ * @param {string} lang
+ */
 
-  const currentLang = localStorage.getItem('lang') ?? 'en';
+export async function updateContent(lang) {
+  const $root = document.querySelector('#root');
   const currentTheme = localStorage.getItem('theme') ?? 'light';
 
-  localStorage.setItem('lang', currentLang);
+  localStorage.setItem('lang', lang);
   localStorage.setItem('theme', currentTheme);
 
   $root?.classList.add(currentTheme);
 
-  const response = await fetch(`${API_BASE_URL}/${currentLang}.json`);
+  const response = await fetch(`${API_BASE_URL}/${lang}.json`);
   const responseData = await response.json();
 
-  if($root) $root.innerHTML = App(responseData);
+  if ($root) $root.innerHTML = App(responseData);
   addHandlers(responseData);
-})();
+}
