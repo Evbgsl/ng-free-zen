@@ -1,9 +1,11 @@
-import { updateContent } from './utils/index.js';
+import { getData } from './utils/index.js';
+import { renderApp } from './utils/index.js';
+import { showLoader, hideLoader } from './utils/index.js';
+import { toggleBurgerAndNav } from './utils/index.js';
 
 import { IconMoon } from './ui/IconMoon/index.js';
 import { IconSun } from './ui/IconSun/index.js';
 
-import { toggleBurgerAndNav } from './utils/index.js';
 
 /**
  * @function handleLogoClick
@@ -119,10 +121,12 @@ export const handleCloseClick = () => {
  * @param {Event} event
  */
 
-export const handleLangChange = (event) => {
+export const handleLangChange = async (event) => {
+  showLoader();
   const $langSelector = /** @type { HTMLSelectElement | null } */ (event.target);
   if (!$langSelector) return;
-
   const selectedLang = $langSelector.value;
-  updateContent(selectedLang);
+  const data = await getData(selectedLang);
+  renderApp(data);
+  hideLoader();
 };
