@@ -1,6 +1,8 @@
-import { App } from './App.js';
-import { addHandlers } from './addHandlers.js';
-import { API_BASE_URL } from './config.js';
+// import { App } from './App.js';
+// import { addHandlers } from './addHandlers.js';
+// import { API_BASE_URL } from './config.js';
+
+import { updateContent } from './updateContent.js';
 
 import { IconMoon } from './ui/IconMoon/index.js';
 import { IconSun } from './ui/IconSun/index.js';
@@ -122,23 +124,9 @@ export const handleCloseClick = () => {
  */
 
 export const handleLangChange = (event) => {
+  const $langSelector = /** @type { HTMLSelectElement | null } */ (event.target);
+  if (!$langSelector) return;
 
-  ( async () => {
-    const $langSelector = /** @type { HTMLSelectElement  | null } */ (event.target)
-    /** @type { HTMLElement | null } */
-    const $root = document.querySelector('#root');
-
-    if (!$langSelector || !$root) return;
-
-    const selectedLang = $langSelector.value;
-    localStorage.setItem('lang', selectedLang);
-
-    console.log(`${API_BASE_URL}/${selectedLang}.json`);
-
-    const response = await fetch(`${API_BASE_URL}/${selectedLang}.json`);
-    const responseData = await response.json();
-
-    if($root) $root.innerHTML = App(responseData);
-    addHandlers(responseData)
-  })()
+  const selectedLang = $langSelector.value;
+  updateContent(selectedLang);
 };

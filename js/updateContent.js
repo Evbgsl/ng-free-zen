@@ -7,7 +7,7 @@ import { API_BASE_URL } from './config.js';
  * @param {string} lang
  */
 
-export async function updateContent(lang) {
+export const updateContent = async (lang) => {
   const $root = document.querySelector('#root');
   const currentTheme = localStorage.getItem('theme') ?? 'light';
 
