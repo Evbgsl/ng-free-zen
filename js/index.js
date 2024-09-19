@@ -1,4 +1,4 @@
-import { updateContent } from './updateContent.js';
+import { updateContent } from './utils/index.js';
 
 (async () => {
   const currentLang = localStorage.getItem('lang') ?? 'en';

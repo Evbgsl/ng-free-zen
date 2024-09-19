@@ -1,6 +1,6 @@
-import { App } from './App.js';
-import { addHandlers } from './addHandlers.js';
-import { API_BASE_URL } from './config.js';
+import { App } from '../App.js';
+import { addHandlers } from '../addHandlers.js';
+import { API_BASE_URL } from '../config.js';
 
 /**
  * @function updateContent

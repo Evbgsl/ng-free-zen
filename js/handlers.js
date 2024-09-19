@@ -1,8 +1,4 @@
-// import { App } from './App.js';
-// import { addHandlers } from './addHandlers.js';
-// import { API_BASE_URL } from './config.js';
-
-import { updateContent } from './updateContent.js';
+import { updateContent } from './utils/index.js';
 
 import { IconMoon } from './ui/IconMoon/index.js';
 import { IconSun } from './ui/IconSun/index.js';
