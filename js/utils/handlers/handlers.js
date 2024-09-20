@@ -1,6 +1,7 @@
-import { processDataAndRender } from '../../utils/index.js';
-import { showLoader, hideLoader } from '../../utils/index.js';
+import { showLoader } from '../../utils/index.js';
+import { hideLoader } from '../../utils/index.js';
 import { toggleBurgerAndNav } from '../../utils/index.js';
+import { processDataAndRender } from '../../utils/index.js';
 
 import { IconMoon } from '../../ui/IconMoon/index.js';
 import { IconSun } from '../../ui/IconSun/index.js';
