@@ -93,7 +93,7 @@ export const handleNavLinkClick = (event) => {
       top: offsetPosition,
       behavior: 'smooth',
     });
-  }
+  };
 };
 
 /**
@@ -126,5 +126,5 @@ export const handleLangChange = async (event) => {
     showLoader();
     await processDataAndRender(selectedLang);
     hideLoader();
-  }
+  };
 };
