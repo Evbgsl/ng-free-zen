@@ -1,11 +1,10 @@
-import { getData } from './utils/index.js';
-import { renderApp } from './utils/index.js';
-import { showLoader, hideLoader } from './utils/index.js';
+import { showLoader } from './utils/index.js';
+import { hideLoader } from './utils/index.js';
+import { processDataAndRender } from './utils/index.js';
 
 (async () => {
   showLoader();
   const currentLang = localStorage.getItem('lang') ?? 'en';
-  const data = await getData(currentLang);
-  renderApp(data);
+  await processDataAndRender(currentLang);
   hideLoader();
 })();

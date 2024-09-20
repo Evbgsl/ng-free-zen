@@ -1,6 +1,7 @@
-export { toggleBurgerAndNav } from './toggleBurgerAndNav.js';
-export { getData } from './getData.js';
-export { renderApp } from './renderApp.js';
-export { showLoader } from './showLoader.js';
-export { hideLoader } from './hideLoader.js';
-
+export { toggleBurgerAndNav } from './helpers/toggleBurgerAndNav.js';
+export { getData } from './helpers/getData.js';
+export { renderApp } from './helpers/renderApp.js'
+export { processDataAndRender } from './helpers/processDataAndRender.js';
+export { showLoader } from './preLoader/showLoader.js';
+export { hideLoader } from './preLoader/hideLoader.js';
+export { addHandlers } from './handlers/addHandlers.js';
