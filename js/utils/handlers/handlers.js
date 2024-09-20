@@ -98,7 +98,7 @@ export const handleNavLinkClick = (event) => {
 
 /**
  * @function handleOrderClick
- * @description Set scrolling with the header height, hide nav menu.
+ * @description Show modal window
  */
 
 export const handleOrderClick = () => {
@@ -107,6 +107,11 @@ export const handleOrderClick = () => {
   $modal.classList.add('is-visible');
 };
 
+/**
+ * @function handleCloseClick
+ * @description Close modal window
+ */
+
 export const handleCloseClick = () => {
   const $modal = /** @type { HTMLElement | null } */ document.querySelector('#modal');
   if (!$modal) return;
@@ -114,8 +119,8 @@ export const handleCloseClick = () => {
 };
 
 /**
- * @function onLangChange
- * @description Change language
+ * @function handleLangChange
+ * @description Changes language
  * @param {Event} event
  */
 
