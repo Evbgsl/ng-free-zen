@@ -16,5 +16,5 @@ export const processDataAndRender = async (lang) => {
     $root.innerHTML = '<p>Что-то пошло не так</p>';
   } else {
     renderApp(data);
-  }
+  };
 };
