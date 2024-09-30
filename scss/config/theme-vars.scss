@@ -1,4 +1,4 @@
-.root[data-theme="light"] {
+.root.light {
   // color:
   --color-primary: #000;
   --text-footer-color: #fff;
@@ -16,7 +16,7 @@
   --icon-color: black;
   }
 
-.root[data-theme="dark"] {
+.root.dark {
   // color:
   --color-primary: #fff;
   --text-footer-color: #fff;

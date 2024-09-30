@@ -1,10 +1,10 @@
-import { App } from './App.js';
-import { addHandlers } from './addHandlers.js';
+import { showLoader } from '../../utils/index.js';
+import { hideLoader } from '../../utils/index.js';
+import { toggleBurgerAndNav } from '../../utils/index.js';
+import { processDataAndRender } from '../../utils/index.js';
 
-import { IconMoon } from './ui/IconMoon/index.js';
-import { IconSun } from './ui/IconSun/index.js';
-
-import { toggleBurgerAndNav } from './utils/index.js';
+import { IconMoon } from '../../ui/IconMoon/index.js';
+import { IconSun } from '../../ui/IconSun/index.js';
 
 /**
  * @function handleLogoClick
@@ -19,7 +19,7 @@ export const handleLogoClick = () => {
 };
 
 /**
- * @typedef {import ('./types').Brand} Brand
+ * @typedef {import ('../../types').Brand} Brand
  */
 
 /**
@@ -40,13 +40,13 @@ export const onThemeClick = (event, brands) => {
 
   if (!$root || !$themeBtn || !$brandNodes) return;
 
-  const currentTheme = $themeBtn.dataset.theme;
+  const currentTheme = localStorage.getItem('theme') || 'light';
   const newTheme = currentTheme === 'light'
     ? 'dark'
     : 'light';
 
-  $root.dataset.theme = newTheme;
-  $themeBtn.dataset.theme = newTheme;
+  localStorage.setItem('theme', newTheme);
+  $root.classList.replace(currentTheme, newTheme);
   $themeBtn.innerHTML = newTheme === 'light'
     ? IconMoon()
     : IconSun();
@@ -94,12 +94,12 @@ export const handleNavLinkClick = (event) => {
       top: offsetPosition,
       behavior: 'smooth',
     });
-  }
+  };
 };
 
 /**
  * @function handleOrderClick
- * @description Set scrolling with the header height, hide nav menu.
+ * @description Show modal window
  */
 
 export const handleOrderClick = () => {
@@ -108,6 +108,11 @@ export const handleOrderClick = () => {
   $modal.classList.add('is-visible');
 };
 
+/**
+ * @function handleCloseClick
+ * @description Close modal window
+ */
+
 export const handleCloseClick = () => {
   const $modal = /** @type { HTMLElement | null } */ document.querySelector('#modal');
   if (!$modal) return;
@@ -115,28 +120,17 @@ export const handleCloseClick = () => {
 };
 
 /**
- * @function onLangChange
- * @description Change language
+ * @function handleLangChange
+ * @description Changes language
  * @param {Event} event
  */
 
-export const handleLangChange = (event) => {
-  const $langSelector = /** @type { HTMLSelectElement  | null } */ (event.target)
-  /** @type { HTMLElement | null } */
-  const $root = document.querySelector('#root');
-
-  if (!$langSelector || !$root) return;
-
-  const selectedLang = $langSelector.value;
-  const requestURL = `https://ng-free-zen-evbgsl-default-rtdb.firebaseio.com/languages/${selectedLang}.json`;
-
-  fetch(requestURL)
-    .then((response) => response.json())
-    .then((responseData) => {
-      $root.innerHTML = App(responseData);
-      addHandlers(responseData);
-    })
-    .catch((error) => {
-      console.error('Ошибка запроса:', error);
-    });
+export const handleLangChange = async (event) => {
+  const $langSelector = /** @type { HTMLSelectElement | null } */ (event.target);
+  if ($langSelector) {
+    const selectedLang = $langSelector.value;
+    showLoader();
+    await processDataAndRender(selectedLang);
+    hideLoader();
+  };
 };

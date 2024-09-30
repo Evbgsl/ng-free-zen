@@ -1,15 +1,10 @@
-import { App } from './App.js';
-import { addHandlers } from './addHandlers.js';
+import { showLoader } from './utils/index.js';
+import { hideLoader } from './utils/index.js';
+import { processDataAndRender } from './utils/index.js';
 
-const $root = document.querySelector('#root');
-
-fetch('https://ng-free-zen-evbgsl-default-rtdb.firebaseio.com/languages/en.json')
-  .then((response) => response.json())
-  .then((responseData) => {
-    if(!$root) return;
-    $root.innerHTML = App(responseData);
-    addHandlers(responseData);
-  })
-  .catch((error) => {
-    console.error('Ошибка запроса:', error);
-  });
+(async () => {
+  showLoader();
+  const currentLang = localStorage.getItem('lang') ?? 'en';
+  await processDataAndRender(currentLang);
+  hideLoader();
+})();

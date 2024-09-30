@@ -9,7 +9,7 @@ import {
 } from './handlers.js';
 
 /**
- * @typedef {import ('./types').AppData} AppData
+ * @typedef {import ('../../types').AppDataFromAPI} AppData
  */
 
 /**
